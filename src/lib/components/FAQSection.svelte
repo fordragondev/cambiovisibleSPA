@@ -50,41 +50,41 @@
 	}
 
 	.coming-soon {
-		background: linear-gradient(135deg, #f9f6f0 0%, #f0e8d8 100%);
+		background: linear-gradient(135deg, var(--color-beige-light) 0%, var(--color-beige) 100%);
 		padding: 1.875rem;
 		border-radius: 0.9375rem;
 		margin-bottom: 2.5rem;
 		text-align: center;
-		border: 2px solid #daa520;
+		border: 2px solid var(--color-primary);
 	}
 
 	.coming-soon h3 {
 		font-family: 'Cormorant Garamond', serif;
 		font-size: 2em;
-		color: #8b6f47;
+		color: var(--color-brown);
 		margin-bottom: 1.25rem;
 	}
 
 	.coming-soon p {
-		color: #6b5d52;
+		color: var(--color-text);
 		font-size: 1.1em;
 		line-height: 1.8;
 		margin: 0;
 	}
 
 	.coming-soon strong {
-		color: #8b6f47;
+		color: var(--color-brown);
 	}
 
 	.availability-note {
 		font-size: 0.95em;
-		color: #a0826d;
+		color: var(--color-brown-light);
 	}
 
 	.section-title {
 		font-family: 'Cormorant Garamond', serif;
 		font-size: 2.5em;
-		color: #8b6f47;
+		color: var(--color-brown);
 		margin-bottom: 2.5rem;
 		text-align: center;
 		position: relative;
@@ -99,7 +99,7 @@
 		transform: translateX(-50%);
 		width: 100px;
 		height: 2px;
-		background: linear-gradient(to right, transparent, #daa520, transparent);
+		background: linear-gradient(to right, transparent, var(--color-primary), transparent);
 	}
 
 	.faq-list {
@@ -111,17 +111,17 @@
 	.faq-item {
 		background: #ffffff;
 		border-radius: 0.625rem;
-		border-left: 3px solid #daa520;
+		border-left: 3px solid var(--color-primary);
 		overflow: hidden;
 		transition: box-shadow 0.3s ease;
 	}
 
 	.faq-item:hover {
-		box-shadow: 0 5px 15px rgba(218, 165, 32, 0.15);
+		box-shadow: 0 5px 15px color-mix(in srgb, var(--color-primary) 15%, transparent);
 	}
 
 	.faq-item.open {
-		box-shadow: 0 5px 15px rgba(218, 165, 32, 0.2);
+		box-shadow: 0 5px 15px color-mix(in srgb, var(--color-primary) 20%, transparent);
 	}
 
 	.faq-question {
@@ -136,18 +136,18 @@
 		align-items: center;
 		gap: 1rem;
 		font-weight: 600;
-		color: #8b6f47;
+		color: var(--color-brown);
 		font-size: 1.1em;
 		transition: background 0.3s ease;
 	}
 
 	.faq-question:hover {
-		background: rgba(249, 246, 240, 0.5);
+		background: color-mix(in srgb, var(--color-beige-light) 50%, transparent);
 	}
 
 	.faq-icon {
 		font-size: 1.5em;
-		color: #daa520;
+		color: var(--color-primary);
 		font-weight: normal;
 		min-width: 30px;
 		text-align: center;
@@ -157,7 +157,7 @@
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.3s ease, padding 0.3s ease;
-		color: #6b5d52;
+		color: var(--color-text);
 		line-height: 1.7;
 	}
 

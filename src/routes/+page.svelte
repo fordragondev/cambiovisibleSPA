@@ -87,7 +87,7 @@
 	.category-title {
 		font-family: 'Cormorant Garamond', serif;
 		font-size: 2.5em;
-		color: #8b6f47;
+		color: var(--color-brown);
 		margin-bottom: 2.5rem;
 		text-align: center;
 		position: relative;
@@ -102,7 +102,7 @@
 		transform: translateX(-50%);
 		width: 100px;
 		height: 2px;
-		background: linear-gradient(to right, transparent, #daa520, transparent);
+		background: linear-gradient(to right, transparent, var(--color-primary), transparent);
 	}
 
 	.products-grid {

@@ -68,7 +68,7 @@
 
 <style>
 	.contact-section {
-		background: linear-gradient(135deg, #f5f0e8 0%, #d4c4a8 100%);
+		background: linear-gradient(135deg, var(--color-beige-light) 0%, var(--color-beige-dark) 100%);
 		padding: 5rem 1.25rem;
 		text-align: center;
 	}
@@ -81,7 +81,7 @@
 	.closing-message {
 		font-family: 'Cormorant Garamond', serif;
 		font-size: 2.8em;
-		color: #8b6f47;
+		color: var(--color-brown);
 		margin-bottom: 3.125rem;
 		font-style: italic;
 		line-height: 1.4;
@@ -89,7 +89,7 @@
 
 	.contact-description {
 		font-size: 1.2em;
-		color: #6b5d52;
+		color: var(--color-text);
 		margin-bottom: 2.5rem;
 		line-height: 1.6;
 	}
@@ -110,7 +110,7 @@
 
 	.qr-label {
 		margin-top: 1rem;
-		color: #8b6f47;
+		color: var(--color-brown);
 		font-weight: 500;
 		font-size: 0.95em;
 	}
@@ -177,14 +177,14 @@
 	}
 
 	.info-content strong {
-		color: #8b6f47;
+		color: var(--color-brown);
 		display: block;
 		margin-bottom: 0.25rem;
 		font-size: 1.05em;
 	}
 
 	.info-content p {
-		color: #6b5d52;
+		color: var(--color-text);
 		margin: 0;
 		font-size: 0.95em;
 	}
@@ -192,7 +192,7 @@
 	.footer-note {
 		margin-top: 3.125rem;
 		font-size: 1.1em;
-		color: #a0826d;
+		color: var(--color-brown-light);
 		line-height: 1.7;
 	}
 

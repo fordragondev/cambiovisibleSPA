@@ -98,30 +98,30 @@
 
 <style>
 	.product-card {
-		background: linear-gradient(135deg, #ffffff 0%, #f9f6f0 100%);
+		background: linear-gradient(135deg, #ffffff 0%, var(--color-beige-light) 100%);
 		padding: 1.875rem;
 		border-radius: 0.9375rem;
-		border: 1px solid #e8dcc8;
+		border: 1px solid var(--color-beige);
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
 		position: relative;
 	}
 
 	.product-card:hover {
 		transform: translateY(-5px);
-		box-shadow: 0 15px 40px rgba(218, 165, 32, 0.25);
+		box-shadow: 0 15px 40px color-mix(in srgb, var(--color-primary) 25%, transparent);
 	}
 
 	.special-offer {
 		position: absolute;
 		top: -0.9375rem;
 		right: 1.25rem;
-		background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+		background: linear-gradient(135deg, var(--color-promo) 0%, var(--color-promo-dark) 100%);
 		color: white;
 		padding: 0.5rem 1.25rem;
 		border-radius: 1.25rem;
 		font-size: 0.85em;
 		font-weight: 600;
-		box-shadow: 0 5px 15px rgba(238, 90, 111, 0.4);
+		box-shadow: 0 5px 15px color-mix(in srgb, var(--color-promo-dark) 40%, transparent);
 		animation: pulse 2s infinite;
 		z-index: 10;
 	}
@@ -140,7 +140,7 @@
 		border-radius: 0.625rem;
 		overflow: hidden;
 		cursor: pointer;
-		background: #f9f6f0;
+		background: var(--color-beige-light);
 	}
 
 	.product-image {
@@ -180,18 +180,18 @@
 	}
 
 	.promotion-message {
-		background: linear-gradient(135deg, #ff6b6b15 0%, #ee5a6f15 100%);
+		background: linear-gradient(135deg, color-mix(in srgb, var(--color-promo) 8%, transparent) 0%, color-mix(in srgb, var(--color-promo-dark) 8%, transparent) 100%);
 		padding: 0.9375rem;
 		border-radius: 0.625rem;
 		margin: 1.25rem 0;
-		border: 2px dashed #ff6b6b;
-		color: #ee5a6f;
+		border: 2px dashed var(--color-promo);
+		color: var(--color-promo-dark);
 		font-weight: 500;
 	}
 
 	.promotion-limit {
 		font-size: 0.9em;
-		color: #a0826d;
+		color: var(--color-brown-light);
 	}
 
 	.product-header {
@@ -206,7 +206,7 @@
 	.product-name {
 		font-family: 'Cormorant Garamond', serif;
 		font-size: 1.9em;
-		color: #8b6f47;
+		color: var(--color-brown);
 		font-weight: 600;
 		flex: 1;
 		min-width: 200px;
@@ -221,14 +221,14 @@
 
 	.product-price {
 		font-size: 1.6em;
-		color: #daa520;
+		color: var(--color-primary);
 		font-weight: 600;
 		display: block;
 	}
 
 	.product-duration {
 		font-size: 0.9em;
-		color: #a0826d;
+		color: var(--color-brown-light);
 		display: block;
 	}
 
@@ -237,14 +237,14 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: 1rem;
-		background: #f9f6f0;
+		background: var(--color-beige-light);
 		padding: 0.5rem 1rem;
 		border-radius: 0.5rem;
 		min-width: 200px;
 	}
 
 	.variant-price {
-		color: #daa520;
+		color: var(--color-primary);
 		font-weight: 600;
 		font-size: 1.1em;
 	}
@@ -258,23 +258,23 @@
 	}
 
 	.availability-badge.low {
-		color: #ee5a6f;
+		color: var(--color-promo-dark);
 		background: #fff5f5;
 	}
 
 	.availability-badge.coming {
-		color: #8b6f47;
-		background: #f9f6f0;
+		color: var(--color-brown);
+		background: var(--color-beige-light);
 	}
 
 	.product-subtitle {
-		color: #8b6f47;
+		color: var(--color-brown);
 		margin-bottom: 0.9375rem;
 		font-style: italic;
 	}
 
 	.benefits-title {
-		color: #8b6f47;
+		color: var(--color-brown);
 		margin-bottom: 0.75rem;
 		font-size: 1.1em;
 	}
@@ -287,7 +287,7 @@
 
 	.benefits-list li {
 		padding: 0.5rem 0 0.5rem 1.875rem;
-		color: #5a4a42;
+		color: var(--color-text-dark);
 		line-height: 1.6;
 		position: relative;
 	}
@@ -296,19 +296,19 @@
 		content: '✓';
 		position: absolute;
 		left: 0;
-		color: #daa520;
+		color: var(--color-primary);
 		font-weight: bold;
 		font-size: 1.2em;
 	}
 
 	.product-ideal {
-		background: #f9f6f0;
+		background: var(--color-beige-light);
 		padding: 0.9375rem 1.25rem;
 		border-radius: 0.625rem;
 		margin-top: 0.9375rem;
 		font-size: 0.95em;
-		color: #6b5d52;
-		border-left: 3px solid #daa520;
+		color: var(--color-text);
+		border-left: 3px solid var(--color-primary);
 	}
 
 	@media (max-width: 768px) {

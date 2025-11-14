@@ -1,7 +1,13 @@
 @import 'tailwindcss';
 
 @theme {
-	/* Custom Color Palette - Cambiovisiblec */
+	/* Fonts */
+	--font-serif: 'Cormorant Garamond', serif;
+	--font-sans: 'Montserrat', sans-serif;
+}
+
+:root {
+	/* Primary Theme - Cambiovisiblec Gold */
 	--color-primary: #daa520; /* Gold */
 	--color-primary-dark: #b8860b; /* Dark gold */
 	--color-brown: #8b6f47; /* Main brown */
@@ -13,9 +19,21 @@
 	--color-text: #6b5d52;
 	--color-promo: #ff6b6b; /* Promotion red */
 	--color-promo-dark: #ee5a6f;
+}
 
-	--font-serif: 'Cormorant Garamond', serif;
-	--font-sans: 'Montserrat', sans-serif;
+[data-theme='secondary'] {
+	/* Secondary Theme - Citron & Violet */
+	--color-primary: #bbbe64; /* Citron */
+	--color-primary-dark: #a0a350; /* Darker citron */
+	--color-brown: #443850; /* English violet */
+	--color-brown-light: #8e5572; /* Magenta haze */
+	--color-beige-light: #f2f7f2; /* Mint cream */
+	--color-beige: #e5ebe5;
+	--color-beige-dark: #bcaa99; /* Khaki */
+	--color-text-dark: #443850;
+	--color-text: #5a4a5e;
+	--color-promo: #8e5572; /* Magenta haze */
+	--color-promo-dark: #6e3d56;
 }
 
 @layer base {

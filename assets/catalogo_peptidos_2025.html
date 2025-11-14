@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiovisiblec - Colección Premium 2025</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f0e8 0%, #e8dcc8 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .catalog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+        
+        .page {
+            min-height: 100vh;
+            padding: 60px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            page-break-after: always;
+        }
+        
+        /* Página 1 - Portada */
+        .page-1 {
+            background: linear-gradient(135deg, #f5f0e8 0%, #d4c4a8 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-1::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(218,165,32,0.1) 0%, transparent 70%);
+        }
+        
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5em;
+            font-weight: 300;
+            color: #8b6f47;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
+            position: relative;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            color: #a0826d;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .tagline {
+            font-size: 1.1em;
+            color: #6b5d52;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .decorative-icon {
+            font-size: 4em;
+            color: rgba(218,165,32,0.3);
+            margin: 40px 0;
+        }
+        
+        /* Página 2 - Introducción */
+        .page-2 {
+            background: #fefdfb;
+        }
+        
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5em;
+            color: #8b6f47;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #daa520, transparent);
+        }
+        
+        .intro-text {
+            font-size: 1.05em;
+            line-height: 1.9;
+            color: #5a4a42;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .intro-text strong {
+            color: #8b6f47;
+            font-weight: 500;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #f9f6f0 0%, #f0e8d8 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+            border-left: 4px solid #daa520;
+        }
+        
+        /* Página 3+ - Productos */
+        .page-products {
+            background: #fefdfb;
+            justify-content: flex-start;
+            padding-top: 80px;
+        }
+        
+        .products-grid {
+            display: grid;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .product-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f9f6f0 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #e8dcc8;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(218,165,32,0.25);
+        }
+        
+        .special-offer {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(238,90,111,0.4);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .product-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .product-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.9em;
+            color: #8b6f47;
+            font-weight: 600;
+            flex: 1;
+        }
+        
+        .product-price-box {
+            text-align: right;
+        }
+        
+        .product-price {
+            font-size: 1.6em;
+            color: #daa520;
+            font-weight: 600;
+            display: block;
+        }
+        
+        .product-duration {
+            font-size: 0.9em;
+            color: #a0826d;
+            margin-top: 5px;
+        }
+        
+        .benefits-list {
+            margin: 20px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .benefits-list li {
+            padding: 8px 0 8px 30px;
+            color: #5a4a42;
+            line-height: 1.6;
+            position: relative;
+        }
+        
+        .benefits-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #daa520;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .product-ideal {
+            background: #f9f6f0;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-size: 0.95em;
+            color: #6b5d52;
+            border-left: 3px solid #daa520;
+        }
+        
+        .price-variants {
+            display: grid;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .price-variant {
+            background: #f9f6f0;
+            padding: 12px 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .price-variant strong {
+            color: #daa520;
+        }
+        
+        /* Página FAQ */
+        .coming-soon {
+            background: linear-gradient(135deg, #f9f6f0 0%, #f0e8d8 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            text-align: center;
+            border: 2px solid #daa520;
+        }
+        
+        .coming-soon h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2em;
+            color: #8b6f47;
+            margin-bottom: 20px;
+        }
+        
+        .faq-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            border-left: 3px solid #daa520;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: #8b6f47;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .faq-answer {
+            color: #6b5d52;
+            line-height: 1.7;
+        }
+        
+        /* Página Contacto */
+        .page-contact {
+            background: linear-gradient(135deg, #f5f0e8 0%, #d4c4a8 100%);
+            text-align: center;
+        }
+        
+        .closing-message {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8em;
+            color: #8b6f47;
+            margin-bottom: 50px;
+            font-style: italic;
+        }
+        
+        .contact-info {
+            font-size: 1.3em;
+            color: #6b5d52;
+            margin: 15px 0;
+            font-weight: 400;
+        }
+        
+        .contact-info strong {
+            color: #8b6f47;
+        }
+        
+        .footer-note {
+            margin-top: 40px;
+            font-size: 1.1em;
+            color: #a0826d;
+        }
+        
+        /* Navegación */
+        .nav-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+        
+        .nav-btn {
+            background: linear-gradient(135deg, #daa520 0%, #b8860b 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(218,165,32,0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(218,165,32,0.4);
+        }
+        
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .page-indicator {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255,255,255,0.95);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: #8b6f47;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-weight: 500;
+        }
+        
+        @media print {
+            .nav-buttons, .page-indicator {
+                display: none;
+            }
+            .page {
+                page-break-after: always;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page {
+                padding: 30px 20px;
+            }
+            .logo {
+                font-size: 2.5em;
+            }
+            .section-title {
+                font-size: 2em;
+            }
+            .product-name {
+                font-size: 1.5em;
+            }
+            .nav-buttons {
+                bottom: 15px;
+                right: 15px;
+                gap: 10px;
+            }
+            .nav-btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="catalog-container">
+        <!-- Página 1: Portada -->
+        <div class="page page-1">
+            <div class="decorative-icon">✨</div>
+            <h1 class="logo">Cambiovisiblec</h1>
+            <p class="subtitle">by Lorena Caicedo</p>
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2em; color: #8b6f47; margin: 30px 0;">
+                Colección Premium de Péptidos 2025
+            </h2>
+            <p class="tagline">
+                Línea exclusiva de bienestar, regeneración y belleza desde adentro.
+            </p>
+            <div class="decorative-icon">💎</div>
+        </div>
+
+        <!-- Página 2: Introducción -->
+        <div class="page page-2">
+            <h2 class="section-title">🌿 Tu cambio visible comienza desde adentro</h2>
+            <div class="intro-text">
+                <p style="margin-bottom: 25px;">
+                    <strong>Bienvenida a la Colección Premium de Péptidos 2025 – Cambiovisiblec.</strong>
+                </p>
+                <p style="margin-bottom: 25px;">
+                    Descubre nuestra línea de péptidos premium, diseñados para equilibrar, regenerar y transformar tu bienestar desde adentro.
+                </p>
+                <div class="highlight-box">
+                    <p style="line-height: 1.9;">
+                        Cada fórmula ha sido desarrollada con <strong>pureza del 99.9%</strong> y el respaldo de laboratorios certificados 🇺🇸, garantizando resultados visibles, seguros y sostenibles.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página 3: Productos Principales -->
+        <div class="page page-products">
+            <h2 class="section-title">💉 Péptidos Premium - Control de Peso</h2>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="special-offer">🎁 PROMOCIÓN DEL MES</div>
+                    <div class="product-header">
+                        <div class="product-name">💉 RETATRUTIDE (RETA)</div>
+                        <div class="product-price-box">
+                            <span class="product-price">$1.800.000</span>
+                            <span class="product-duration">⏱️ 20 mg</span>
+                        </div>
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, #ff6b6b15 0%, #ee5a6f15 100%); padding: 15px; border-radius: 10px; margin: 20px 0; border: 2px dashed #ff6b6b;">
+                        <strong style="color: #ee5a6f;">💕 Por la compra de Retatrutide 20 mg, recibe MOST GRATIS</strong><br>
+                        <span style="font-size: 0.9em; color: #a0826d;">(Válido para las 3 primeras clientas)</span>
+                    </div>
+                    
+                    <h4 style="color: #8b6f47; margin-bottom: 12px; font-size: 1.1em;">🌿 Beneficios:</h4>
+                    <ul class="benefits-list">
+                        <li>Pérdida de peso acelerada y sostenida</li>
+                        <li>Control del apetito y de la ansiedad</li>
+                        <li>Mejora la sensibilidad a la insulina</li>
+                        <li>Incrementa energía y bienestar</li>
+                    </ul>
+                    
+                    <div class="product-ideal">
+                        💎 <strong>Ideal para:</strong> Personas con resistencia a la insulina o dificultad para bajar de peso.
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-name">💊 TIRZEPATIDE (TIRZE)</div>
+                    </div>
+                    
+                    <div class="price-variants">
+                        <div class="price-variant">
+                            <span>📦 10 mg</span>
+                            <strong>$1.100.000</strong>
+                        </div>
+                        <div class="price-variant">
+                            <span>📦 20 mg</span>
+                            <strong>$1.400.000</strong>
+                        </div>
+                    </div>
+                    
+                    <h4 style="color: #8b6f47; margin: 20px 0 12px 0; font-size: 1.1em;">🌿 Beneficios:</h4>
+                    <ul class="benefits-list">
+                        <li>Reduce el apetito y los antojos</li>
+                        <li>Regula el metabolismo y la glucosa</li>
+                        <li>Favorece la quema de grasa corporal</li>
+                    </ul>
+                    
+                    <div class="product-ideal">
+                        💪 Control de peso progresivo y seguro.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página 4: Belleza y Rejuvenecimiento -->
+        <div class="page page-products">
+            <h2 class="section-title">✨ Belleza & Rejuvenecimiento</h2>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-name">💧 GLOW</div>
+                        <div class="product-price-box">
+                            <span class="product-price">$700.000</span>
+                        </div>
+                    </div>
+                    
+                    <p style="color: #8b6f47; margin-bottom: 15px; font-style: italic;">Rejuvenecimiento Facial</p>
+                    
+                    <h4 style="color: #8b6f47; margin-bottom: 12px; font-size: 1.1em;">🌿 Beneficios:</h4>
+                    <ul class="benefits-list">
+                        <li>Favorece la regeneración celular</li>
+                        <li>Mejora el aspecto de la piel</li>
+                    </ul>
+                    
+                    <div class="product-ideal">
+                        ✨ Ideal para complementar cualquier tratamiento corporal o facial.
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-name">🔥 MOST</div>
+                        <div class="product-price-box">
+                            <span class="product-price">$700.000</span>
+                        </div>
+                    </div>
+                    
+                    <p style="color: #8b6f47; margin-bottom: 15px; font-style: italic;">Activador Metabólico</p>
+                    
+                    <h4 style="color: #8b6f47; margin-bottom: 12px; font-size: 1.1em;">🌿 Beneficios:</h4>
+                    <ul class="benefits-list">
+                        <li>Ayuda a acelerar el metabolismo</li>
+                        <li>Mantiene la energía durante el día</li>
+                    </ul>
+                    
+                    <div class="product-ideal">
+                        💥 Mantén tu energía y vitalidad activa.
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-name">🧬 EPHITALON</div>
+                        <div class="product-price-box">
+                            <span style="color: #a0826d; font-size: 1.1em; font-weight: 500;">📞 Consultar disponibilidad</span>
+                        </div>
+                    </div>
+                    
+                    <p style="color: #8b6f47; margin-bottom: 15px; font-style: italic;">Contribuye a la reparación celular y al bienestar general</p>
+                    
+                    <h4 style="color: #8b6f47; margin-bottom: 12px; font-size: 1.1em;">🌿 Beneficios:</h4>
+                    <ul class="benefits-list">
+                        <li>Regenera y rejuvenece las células</li>
+                        <li>Mejora el descanso y la vitalidad</li>
+                        <li>Favorece longevidad y bienestar integral</li>
+                    </ul>
+                    
+                    <div class="product-ideal">
+                        💫 Para quienes buscan equilibrio y juventud desde adentro.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página 5: Metabolismo y Energía -->
+        <div class="page page-products">
+            <h2 class="section-title">⚡ Metabolismo & Energía</h2>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-name">💪 CAGRI</div>
+                        <div class="product-price-box">
+                            <span class="product-price">$800.000</span>
+                            <span style="display: block; margin-top: 8px; color: #ee5a6f; font-size: 0.9em; font-weight: 600;">⚠️ Bajo disponibilidad</span>
+                        </div>
+                    </div>
+                    
+                    <p style="color: #8b6f47; margin-bottom: 15px; font-style: italic;">Control del Apetito</p>
+                    
+                    <h4 style="color: #8b6f47; margin-bottom: 12px; font-size: 1.1em;">🌿 Beneficios:</h4>
+                    <ul class="benefits-list">
+                        <li>Disminuye ansiedad por la comida</li>
+                        <li>Aumenta metabolismo y quema grasa</li>
+                        <li>Regula el apetito de forma natural</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-name">💉 LIPO-C</div>
+                        <div class="product-price-box">
+                            <span style="color: #a0826d; font-size: 1.1em; font-weight: 500;">📞 Consultar precio</span>
+                        </div>
+                    </div>
+                    
+                    <p style="color: #8b6f47; margin-bottom: 15px; font-style: italic;">Detox y Metabolismo</p>
+                    
+                    <h4 style="color: #8b6f47; margin-bottom: 12px; font-size: 1.1em;">🌿 Beneficios:</h4>
+                    <ul class="benefits-list">
+                        <li>Depura el hígado y acelera el metabolismo</li>
+                        <li>Ayuda a eliminar grasa y toxinas</li>
+                        <li>Mejora energía y rendimiento físico</li>
+                    </ul>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-name">⚡ 5-AMINO</div>
+                        <div class="product-price-box">
+                            <span style="color: #a0826d; font-size: 1.1em; font-weight: 500;">📞 Consultar precio</span>
+                        </div>
+                    </div>
+                    
+                    <p style="color: #8b6f47; margin-bottom: 15px; font-style: italic;">5-Amino-1MQ</p>
+                    
+                    <h4 style="color: #8b6f47; margin-bottom: 12px; font-size: 1.1em;">🌿 Beneficios:</h4>
+                    <ul class="benefits-list">
+                        <li>Favorece la pérdida de grasa celular</li>
+                        <li>Preserva masa muscular</li>
+                        <li>Aumenta energía y resistencia física</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página 6: FAQ -->
+        <div class="page page-products">
+            <div class="coming-soon">
+                <h3>💪 Próximos Envíos</h3>
+                <p style="color: #6b5d52; font-size: 1.1em; line-height: 1.8;">
+                    <strong>CAGRI, LIPO-C y 5-AMINO</strong><br>
+                    📦 Llegará nuevo stock próximamente.<br>
+                    <span style="font-size: 0.95em;">¡Consulta disponibilidad actualizada!</span>
+                </p>
+            </div>
+
+            <h2 class="section-title">💬 Preguntas Frecuentes</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">¿Cada cuánto se aplica el péptido?</div>
+                <div class="faq-answer">Generalmente una vez por semana, ajustada a tus objetivos personales y tipo de péptido.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Cuánto dura cada frasco?</div>
+                <div class="faq-answer">La duración varía según el producto: desde 4 hasta 8 semanas aproximadamente.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Cómo se conservan?</div>
+                <div class="faq-answer">Deben mantenerse refrigerados, evitando la exposición directa al sol y cambios bruscos de temperatura.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Puedo combinar los péptidos?</div>
+                <div class="faq-answer">Sí, existen combinaciones seguras que potencian los resultados. Consulta conmigo para diseñar tu plan personalizado según tus objetivos.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Los péptidos son seguros?</div>
+                <div class="faq-answer">Todos nuestros péptidos tienen pureza del 99.9% y están respaldados por laboratorios certificados 🇺🇸. Siempre recomiendo una evaluación personalizada antes de iniciar.</div>
+            </div>
+        </div>
+
+        <!-- Página 7: Contacto -->
+        <div class="page page-contact">
+            <div class="closing-message">
+                ✨ "Transforma tu bienestar<br>desde adentro."
+            </div>
+            
+            <p style="font-size: 1.2em; color: #6b5d52; margin-bottom: 30px;">
+                📲 Contáctame directamente escaneando este código<br>
+                o escríbeme a WhatsApp para más información y pedidos
+            </p>
+            
+            <div style="margin: 40px auto; max-width: 300px;">
+                <img src="https://i.ibb.co/placeholder-qr.png" 
+                     alt="Código QR WhatsApp Lorena Caicedo" 
+                     style="width: 100%; max-width: 280px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); background: white; padding: 20px;"
+                     onerror="this.parentElement.innerHTML='<div style=\'background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);\'><div style=\'font-size: 3em; margin-bottom: 10px;\'>📱</div><div style=\'color: #8b6f47; font-size: 1.2em;\'>Código QR</div><div style=\'color: #a0826d; margin-top: 10px;\'>Escanea para contactar</div></div>'">
+            </div>

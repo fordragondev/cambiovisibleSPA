@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+
+@theme {
+	/* Custom Color Palette - Cambiovisiblec */
+	--color-primary: #daa520; /* Gold */
+	--color-primary-dark: #b8860b; /* Dark gold */
+	--color-brown: #8b6f47; /* Main brown */
+	--color-brown-light: #a0826d;
+	--color-beige-light: #f5f0e8;
+	--color-beige: #e8dcc8;
+	--color-beige-dark: #d4c4a8;
+	--color-text-dark: #5a4a42;
+	--color-text: #6b5d52;
+	--color-promo: #ff6b6b; /* Promotion red */
+	--color-promo-dark: #ee5a6f;
+
+	--font-serif: 'Cormorant Garamond', serif;
+	--font-sans: 'Montserrat', sans-serif;
+}
+
+@layer base {
+	body {
+		@apply bg-gradient-to-br from-beige-light to-beige text-text;
+		font-family: var(--font-sans);
+	}
+
+	h1, h2, h3 {
+		font-family: var(--font-serif);
+		color: var(--color-brown);
+	}
+}
+
+@layer utilities {
+	.text-primary {
+		color: var(--color-primary);
+	}
+
+	.text-brown {
+		color: var(--color-brown);
+	}
+
+	.bg-primary {
+		background-color: var(--color-primary);
+	}
+
+	.bg-beige-light {
+		background: var(--color-beige-light);
+	}
+
+	.bg-gradient-gold {
+		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+	}
+
+	.bg-gradient-beige {
+		background: linear-gradient(135deg, var(--color-beige-light) 0%, var(--color-beige-dark) 100%);
+	}
+
+	.shadow-gold {
+		box-shadow: 0 5px 15px rgba(218, 165, 32, 0.3);
+	}
+
+	.shadow-gold-lg {
+		box-shadow: 0 15px 40px rgba(218, 165, 32, 0.25);
+	}
+}

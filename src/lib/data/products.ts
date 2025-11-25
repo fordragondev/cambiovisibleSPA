@@ -24,7 +24,7 @@ export const products: Product[] = [
 		currency: 'COP',
 		dosage: '20 mg',
 		image: '/images/products/retatrutide.jpg', // TODO: Add actual image
-		instagramUrl: 'https://instagram.com/p/retatrutide-post', // TODO: Replace with actual post
+		instagramUrl: 'https://instagram.com/cambiovisiblec', // TODO: Replace with actual post
 		category: 'weight-control',
 		featured: true,
 		promotion: {
@@ -49,7 +49,7 @@ export const products: Product[] = [
 		],
 		currency: 'COP',
 		image: '/images/products/tirzepatide.jpg',
-		instagramUrl: 'https://instagram.com/p/tirzepatide-post',
+		instagramUrl: 'https://instagram.com/cambiovisiblec',
 		category: 'weight-control',
 		featured: true
 	},
@@ -68,7 +68,7 @@ export const products: Product[] = [
 		price: 700000,
 		currency: 'COP',
 		image: '/images/products/glow.jpg',
-		instagramUrl: 'https://instagram.com/p/glow-post',
+		instagramUrl: 'https://instagram.com/cambiovisiblec',
 		category: 'beauty-rejuvenation'
 	},
 	{
@@ -84,7 +84,7 @@ export const products: Product[] = [
 		price: 700000,
 		currency: 'COP',
 		image: '/images/products/most.jpg',
-		instagramUrl: 'https://instagram.com/p/most-post',
+		instagramUrl: 'https://instagram.com/cambiovisiblec',
 		category: 'beauty-rejuvenation'
 	},
 	{
@@ -101,7 +101,7 @@ export const products: Product[] = [
 		price: 'consult',
 		currency: 'COP',
 		image: '/images/products/ephitalon.jpg',
-		instagramUrl: 'https://instagram.com/p/ephitalon-post',
+		instagramUrl: 'https://instagram.com/cambiovisiblec',
 		category: 'beauty-rejuvenation'
 	},
 
@@ -119,7 +119,7 @@ export const products: Product[] = [
 		price: 800000,
 		currency: 'COP',
 		image: '/images/products/cagri.jpg',
-		instagramUrl: 'https://instagram.com/p/cagri-post',
+		instagramUrl: 'https://instagram.com/cambiovisiblec',
 		category: 'metabolism-energy',
 		availability: 'low'
 	},
@@ -136,7 +136,7 @@ export const products: Product[] = [
 		price: 'consult',
 		currency: 'COP',
 		image: '/images/products/lipo-c.jpg',
-		instagramUrl: 'https://instagram.com/p/lipo-c-post',
+		instagramUrl: 'https://instagram.com/cambiovisiblec',
 		category: 'metabolism-energy',
 		availability: 'coming-soon'
 	},
@@ -153,7 +153,7 @@ export const products: Product[] = [
 		price: 'consult',
 		currency: 'COP',
 		image: '/images/products/5-amino.jpg',
-		instagramUrl: 'https://instagram.com/p/5-amino-post',
+		instagramUrl: 'https://instagram.com/cambiovisiblec',
 		category: 'metabolism-energy',
 		availability: 'coming-soon'
 	}

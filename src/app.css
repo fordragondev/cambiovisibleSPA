@@ -4,10 +4,56 @@
 	/* Fonts */
 	--font-serif: 'Cormorant Garamond', serif;
 	--font-sans: 'Montserrat', sans-serif;
+
+	/* Typography Scale - Enhanced for readability and personality */
+	--font-size-xs: 0.875rem;    /* 14px - Small labels */
+	--font-size-sm: 1rem;         /* 16px - Small body text */
+	--font-size-base: 1.125rem;   /* 18px - Base body text */
+	--font-size-lg: 1.25rem;      /* 20px - Large body text */
+	--font-size-xl: 1.5rem;       /* 24px - Subheadings */
+	--font-size-2xl: 2rem;        /* 32px - Section titles */
+	--font-size-3xl: 2.5rem;      /* 40px - Hero titles */
+	--font-size-4xl: 3.5rem;      /* 56px - Main headlines */
+
+	/* Line Heights - Optimized for readability */
+	--leading-tight: 1.2;
+	--leading-snug: 1.4;
+	--leading-normal: 1.6;
+	--leading-relaxed: 1.8;
+	--leading-loose: 2;
+
+	/* Letter Spacing */
+	--tracking-tight: -0.025em;
+	--tracking-normal: 0;
+	--tracking-wide: 0.025em;
+	--tracking-wider: 0.05em;
+	--tracking-widest: 0.1em;
+
+	/* Font Weights - Semantic naming */
+	--font-weight-light: 300;
+	--font-weight-normal: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
 }
 
 :root {
 	/* Primary Theme - Cambiovisiblec Gold */
+	--color-primary: #daa520; /* Gold */
+	--color-primary-dark: #b8860b; /* Dark gold */
+	--color-brown: #8b6f47; /* Main brown */
+	--color-brown-light: #a0826d;
+	--color-beige-light: #f5f0e8;
+	--color-beige: #e8dcc8;
+	--color-beige-dark: #d4c4a8;
+	--color-text-dark: #5a4a42;
+	--color-text: #6b5d52;
+	--color-promo: #ff6b6b; /* Promotion red */
+	--color-promo-dark: #ee5a6f;
+}
+
+[data-theme='primary'] {
+	/* Primary Theme - Cambiovisiblec Gold (explicit) */
 	--color-primary: #daa520; /* Gold */
 	--color-primary-dark: #b8860b; /* Dark gold */
 	--color-brown: #8b6f47; /* Main brown */
@@ -40,15 +86,140 @@
 	body {
 		@apply bg-gradient-to-br from-beige-light to-beige text-text;
 		font-family: var(--font-sans);
+		font-size: var(--font-size-base);
+		line-height: var(--leading-relaxed);
+		letter-spacing: var(--tracking-normal);
 	}
 
-	h1, h2, h3 {
+	h1, h2, h3, h4, h5, h6 {
 		font-family: var(--font-serif);
+		color: var(--color-brown);
+		line-height: var(--leading-tight);
+		letter-spacing: var(--tracking-wide);
+	}
+
+	h1 {
+		font-size: var(--font-size-4xl);
+		font-weight: 300;
+		letter-spacing: var(--tracking-wider);
+	}
+
+	h2 {
+		font-size: var(--font-size-3xl);
+		font-weight: 400;
+	}
+
+	h3 {
+		font-size: var(--font-size-2xl);
+		font-weight: 600;
+	}
+
+	h4 {
+		font-size: var(--font-size-xl);
+		font-weight: 600;
+	}
+
+	p {
+		margin-bottom: 1rem;
+		line-height: var(--leading-relaxed);
+	}
+
+	strong {
+		font-weight: 600;
 		color: var(--color-brown);
 	}
 }
 
+@layer components {
+	/* Section Titles - Used in Hero, FAQ, +page for category/section headings */
+	.section-title {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-3xl);
+		font-weight: var(--font-weight-normal);
+		color: var(--color-brown);
+		letter-spacing: var(--tracking-wide);
+		line-height: var(--leading-tight);
+		text-align: center;
+		margin-bottom: 2.5rem;
+	}
+
+	.section-title-sm {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-2xl);
+		font-weight: var(--font-weight-semibold);
+		color: var(--color-brown);
+		letter-spacing: var(--tracking-wide);
+		line-height: var(--leading-snug);
+	}
+
+	/* Hero/Display Headlines - For main hero section */
+	.display-xl {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-4xl);
+		font-weight: var(--font-weight-light);
+		letter-spacing: var(--tracking-wider);
+		line-height: var(--leading-tight);
+		color: var(--color-brown);
+	}
+
+	/* Product Titles - For product cards */
+	.product-title {
+		font-family: var(--font-serif);
+		font-size: 1.9rem;
+		font-weight: var(--font-weight-semibold);
+		color: var(--color-brown);
+		line-height: var(--leading-tight);
+	}
+
+	/* Body Text Variants - For consistent body typography */
+	.body-text {
+		font-size: var(--font-size-base);
+		line-height: var(--leading-relaxed);
+		font-weight: var(--font-weight-normal);
+		color: var(--color-text-dark);
+	}
+
+	.body-text-lg {
+		font-size: var(--font-size-lg);
+		line-height: var(--leading-relaxed);
+		font-weight: var(--font-weight-normal);
+		color: var(--color-text-dark);
+	}
+
+	.body-text-sm {
+		font-size: var(--font-size-sm);
+		line-height: var(--leading-normal);
+		font-weight: var(--font-weight-normal);
+		color: var(--color-text);
+	}
+
+	/* Responsive Typography - Mobile breakpoints */
+	@media (max-width: 768px) {
+		.section-title {
+			font-size: var(--font-size-2xl);
+			margin-bottom: 2rem;
+		}
+
+		.section-title-sm {
+			font-size: var(--font-size-xl);
+		}
+
+		.display-xl {
+			font-size: 2.5rem;
+		}
+
+		.product-title {
+			font-size: 1.5rem;
+		}
+
+		.body-text-lg {
+			font-size: var(--font-size-base);
+		}
+	}
+}
+
 @layer utilities {
+	/* Color Utilities */
 	.text-primary {
 		color: var(--color-primary);
 	}
@@ -79,5 +250,73 @@
 
 	.shadow-gold-lg {
 		box-shadow: 0 15px 40px rgba(218, 165, 32, 0.25);
+	}
+
+	/* Typography Utilities */
+	.text-display {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-4xl);
+		font-weight: 300;
+		line-height: var(--leading-tight);
+		letter-spacing: var(--tracking-wider);
+		color: var(--color-brown);
+	}
+
+	.text-heading-lg {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-3xl);
+		font-weight: 400;
+		line-height: var(--leading-snug);
+		letter-spacing: var(--tracking-wide);
+		color: var(--color-brown);
+	}
+
+	.text-heading {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-2xl);
+		font-weight: 600;
+		line-height: var(--leading-snug);
+		color: var(--color-brown);
+	}
+
+	.text-subheading {
+		font-size: var(--font-size-xl);
+		font-weight: 500;
+		line-height: var(--leading-normal);
+		letter-spacing: var(--tracking-wide);
+		color: var(--color-brown);
+	}
+
+	.text-body-lg {
+		font-size: var(--font-size-lg);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-dark);
+	}
+
+	.text-body {
+		font-size: var(--font-size-base);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-dark);
+	}
+
+	.text-body-sm {
+		font-size: var(--font-size-sm);
+		line-height: var(--leading-normal);
+		color: var(--color-text);
+	}
+
+	.text-label {
+		font-size: var(--font-size-xs);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: var(--tracking-widest);
+		color: var(--color-brown-light);
+	}
+
+	.text-elegant {
+		font-family: var(--font-serif);
+		font-style: italic;
+		font-weight: 300;
+		letter-spacing: var(--tracking-wide);
 	}
 }

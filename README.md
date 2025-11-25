@@ -1,38 +1,115 @@
-# sv
+# Cambiovisiblec
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Premium peptide product catalog single-page application by Lorena Caicedo. A modern, responsive website showcasing wellness and beauty peptide products with integrated e-commerce features.
 
-## Creating a project
+## Tech Stack
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **SvelteKit 2** with Svelte 5 (runes-based syntax)
+- **TypeScript** (strict mode)
+- **Tailwind CSS 4** (Vite plugin)
+- **Vite** build tool
+- **adapter-auto** for deployment
 
-```sh
-# create a new project in the current directory
-npx sv create
+## Features
 
-# create a new project in my-app
-npx sv create my-app
+- Mobile-first responsive design
+- Sticky navigation with mobile menu
+- 8 premium peptide products across 3 categories
+- Product cards with Instagram integration
+- FAQ accordion section
+- WhatsApp QR code contact integration
+- Smooth scroll navigation
+- Lazy loading images
+- Custom Tailwind theme with brand colors
+
+## Product Categories
+
+1. **Control de Peso** (Weight Control)
+2. **Belleza & Rejuvenecimiento** (Beauty & Rejuvenation)
+3. **Metabolismo & Energía** (Metabolism & Energy)
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
 ```
 
-## Developing
+Start development server:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
+```bash
 npm run dev
+```
 
-# or start the server and open the app in a new browser tab
+Start with browser auto-open:
+
+```bash
 npm run dev -- --open
+```
+
+## Type Checking
+
+Run type checks:
+
+```bash
+npm run check
+```
+
+Watch mode for type checking:
+
+```bash
+npm run check:watch
 ```
 
 ## Building
 
-To create a production version of your app:
+Create production build:
 
-```sh
+```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+Preview production build:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```bash
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+├── lib/
+│   ├── components/        # Reusable Svelte components
+│   ├── data/             # Product data and FAQs
+│   └── types/            # TypeScript interfaces
+├── routes/
+│   ├── +layout.svelte    # Global layout with fonts
+│   └── +page.svelte      # Main catalog page
+├── app.css              # Tailwind config & design tokens
+└── app.html             # HTML shell (lang="es")
+```
+
+## Configuration
+
+Before deploying, update the following in `src/lib/data/products.ts`:
+
+- WhatsApp contact number
+- Instagram profile URL
+- Email address
+- Product image paths
+
+## Deployment
+
+This project uses `adapter-auto` which automatically detects your deployment platform. For specific platforms, install the appropriate adapter:
+
+- **Vercel**: `@sveltejs/adapter-vercel`
+- **Netlify**: `@sveltejs/adapter-netlify`
+- **Static hosting**: `@sveltejs/adapter-static`
+
+Update `svelte.config.js` with your chosen adapter.
+
+## License
+
+All rights reserved.

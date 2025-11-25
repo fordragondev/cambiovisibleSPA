@@ -2,9 +2,9 @@ import type { Product, ContactInfo, FAQItem } from '$lib/types/product';
 
 export const contactInfo: ContactInfo = {
 	name: 'Lorena Caicedo',
-	businessName: 'Cambiovisiblec',
-	whatsapp: '+573001234567', // TODO: Replace with actual WhatsApp number
-	instagram: 'https://instagram.com/cambiovisiblec', // TODO: Replace with actual Instagram
+	businessName: 'Cambio Visible',
+	whatsapp: '+573167746996',
+	instagram: 'https://instagram.com/cambiovisiblec',
 };
 
 export const products: Product[] = [

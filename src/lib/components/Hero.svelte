@@ -74,35 +74,41 @@
 	}
 
 	.logo {
-		font-family: 'Cormorant Garamond', serif;
+		font-family: var(--font-serif);
 		font-size: 3.5em;
-		font-weight: 300;
+		font-weight: var(--font-weight-bold);
 		color: var(--color-brown);
 		margin-bottom: 1.25rem;
-		letter-spacing: 3px;
+		letter-spacing: var(--tracking-widest);
 	}
 
 	.subtitle {
+		font-family: var(--font-sans);
 		font-size: 1.3em;
-		color: var(--color-brown-light);
+		color: var(--color-text-dark);
 		margin-bottom: 2.5rem;
-		font-weight: 300;
-		letter-spacing: 2px;
+		font-weight: var(--font-weight-medium);
+		letter-spacing: var(--tracking-wider);
+		text-transform: uppercase;
 	}
 
 	.hero-title {
-		font-family: 'Cormorant Garamond', serif;
-		font-size: 2em;
+		font-family: var(--font-serif);
+		font-size: 2.5em;
 		color: var(--color-brown);
 		margin: 1.875rem 0;
+		font-weight: var(--font-weight-semibold);
+		line-height: var(--leading-tight);
 	}
 
 	.tagline {
-		font-size: 1.1em;
+		font-family: var(--font-sans);
+		font-size: var(--font-size-xl);
 		color: var(--color-text);
-		line-height: 1.8;
-		max-width: 600px;
+		line-height: var(--leading-relaxed);
+		max-width: 650px;
 		margin: 0 auto 2.5rem;
+		font-weight: var(--font-weight-normal);
 	}
 
 	.hero-cta {
@@ -115,13 +121,20 @@
 
 	.btn-primary,
 	.btn-secondary {
-		padding: 0.9375rem 2.5rem;
+		font-family: var(--font-sans);
+		padding: 1.125rem 2.5rem;
 		border-radius: 1.5625rem;
 		font-size: 1.05em;
-		font-weight: 500;
+		font-weight: var(--font-weight-semibold);
 		text-decoration: none;
 		transition: all 0.3s ease;
 		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+		letter-spacing: var(--tracking-wide);
+		text-transform: uppercase;
+		min-height: 50px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.btn-primary {
@@ -152,9 +165,12 @@
 	}
 
 	.section-title {
-		font-family: 'Cormorant Garamond', serif;
-		font-size: 2.5em;
+		font-family: var(--font-serif);
+		font-size: var(--font-size-3xl);
+		font-weight: var(--font-weight-semibold);
 		color: var(--color-brown);
+		letter-spacing: var(--tracking-wide);
+		line-height: var(--leading-tight);
 		margin-bottom: 1.875rem;
 		text-align: center;
 		position: relative;
@@ -173,21 +189,23 @@
 	}
 
 	.intro-text {
-		font-size: 1.05em;
-		line-height: 1.9;
-		color: var(--color-text-dark);
+		font-family: var(--font-sans);
+		font-size: var(--font-size-lg);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text);
 		text-align: center;
-		max-width: 700px;
+		max-width: 750px;
 		margin: 0 auto;
 	}
 
 	.intro-paragraph {
-		margin-bottom: 1.5625rem;
+		margin-bottom: 1.5rem;
+		font-weight: var(--font-weight-normal);
 	}
 
 	.intro-text strong {
 		color: var(--color-brown);
-		font-weight: 500;
+		font-weight: var(--font-weight-bold);
 	}
 
 	.highlight-box {
@@ -199,8 +217,12 @@
 	}
 
 	.highlight-box p {
-		line-height: 1.9;
+		font-family: var(--font-sans);
+		line-height: var(--leading-relaxed);
 		margin: 0;
+		font-size: var(--font-size-base);
+		font-weight: var(--font-weight-medium);
+		color: var(--color-text-dark);
 	}
 
 	@media (max-width: 768px) {
@@ -209,19 +231,23 @@
 		}
 
 		.subtitle {
-			font-size: 1.1em;
+			font-size: 1em;
 		}
 
 		.hero-title {
-			font-size: 1.5em;
+			font-size: 1.75em;
 		}
 
 		.tagline {
-			font-size: 1em;
+			font-size: var(--font-size-base);
 		}
 
 		.section-title {
 			font-size: 2em;
+		}
+
+		.intro-text {
+			font-size: var(--font-size-base);
 		}
 
 		.hero-cta {
@@ -232,6 +258,7 @@
 		.btn-primary,
 		.btn-secondary {
 			width: 100%;
+			min-height: 54px;
 		}
 	}
 </style>

@@ -59,32 +59,39 @@
 	}
 
 	.coming-soon h3 {
-		font-family: 'Cormorant Garamond', serif;
-		font-size: 2em;
+		font-family: var(--font-serif);
+		font-size: var(--font-size-2xl);
+		font-weight: var(--font-weight-normal);
 		color: var(--color-brown);
 		margin-bottom: 1.25rem;
 	}
 
 	.coming-soon p {
-		color: var(--color-text);
-		font-size: 1.1em;
-		line-height: 1.8;
+		color: var(--color-text-dark);
+		font-size: var(--font-size-lg);
+		line-height: var(--leading-relaxed);
 		margin: 0;
+		font-weight: var(--font-weight-normal);
 	}
 
 	.coming-soon strong {
 		color: var(--color-brown);
+		font-weight: var(--font-weight-semibold);
 	}
 
 	.availability-note {
-		font-size: 0.95em;
+		font-size: var(--font-size-base);
 		color: var(--color-brown-light);
+		font-weight: var(--font-weight-medium);
 	}
 
 	.section-title {
-		font-family: 'Cormorant Garamond', serif;
-		font-size: 2.5em;
+		font-family: var(--font-serif);
+		font-size: var(--font-size-3xl);
+		font-weight: var(--font-weight-normal);
 		color: var(--color-brown);
+		letter-spacing: var(--tracking-wide);
+		line-height: var(--leading-tight);
 		margin-bottom: 2.5rem;
 		text-align: center;
 		position: relative;
@@ -126,7 +133,7 @@
 
 	.faq-question {
 		width: 100%;
-		padding: 1.25rem;
+		padding: 1.5rem 1.25rem;
 		background: none;
 		border: none;
 		text-align: left;
@@ -135,9 +142,11 @@
 		justify-content: space-between;
 		align-items: center;
 		gap: 1rem;
-		font-weight: 600;
+		font-weight: var(--font-weight-semibold);
 		color: var(--color-brown);
-		font-size: 1.1em;
+		font-size: var(--font-size-lg);
+		line-height: var(--leading-normal);
+		min-height: 56px;
 		transition: background 0.3s ease;
 	}
 
@@ -157,8 +166,10 @@
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.3s ease, padding 0.3s ease;
-		color: var(--color-text);
-		line-height: 1.7;
+		color: var(--color-text-dark);
+		font-size: var(--font-size-base);
+		line-height: var(--leading-relaxed);
+		font-weight: var(--font-weight-normal);
 	}
 
 	.faq-answer.open {
@@ -172,16 +183,17 @@
 
 	@media (max-width: 768px) {
 		.section-title {
-			font-size: 2em;
+			font-size: var(--font-size-2xl);
 		}
 
 		.coming-soon h3 {
-			font-size: 1.5em;
+			font-size: var(--font-size-xl);
 		}
 
 		.faq-question {
-			font-size: 1em;
-			padding: 1rem;
+			font-size: var(--font-size-base);
+			padding: 1.25rem 1rem;
+			min-height: 56px;
 		}
 
 		.faq-answer.open {

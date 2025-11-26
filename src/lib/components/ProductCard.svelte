@@ -178,10 +178,10 @@
 		position: absolute;
 		bottom: 0.75rem;
 		right: 0.75rem;
-		background: var(--color-beige-light);
+		background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); /* Official Instagram gradient */
 		border-radius: 50%;
 		padding: 0.625rem;
-		box-shadow: 0 2px 8px color-mix(in srgb, var(--color-brown) 20%, transparent);
+		box-shadow: 0 2px 8px rgba(188, 24, 136, 0.3);
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
 		width: 44px;
 		height: 44px;
@@ -189,18 +189,18 @@
 		align-items: center;
 		justify-content: center;
 		z-index: 5;
-		border: 2px solid var(--color-primary);
+		border: 2px solid white;
 	}
 
 	.product-image-link:hover .instagram-badge {
 		transform: scale(1.1);
-		box-shadow: 0 4px 12px color-mix(in srgb, var(--color-brown) 30%, transparent);
+		box-shadow: 0 4px 12px rgba(188, 24, 136, 0.5);
 	}
 
 	.instagram-icon {
 		width: 1.25rem;
 		height: 1.25rem;
-		color: var(--color-primary);
+		color: white; /* White icon on Instagram gradient background */
 	}
 
 	.promotion-message {
@@ -227,12 +227,6 @@
 	}
 
 	.product-name {
-		font-family: var(--font-serif);
-		font-size: 2.2em;
-		color: var(--color-brown);
-		font-weight: var(--font-weight-bold);
-		line-height: var(--leading-tight);
-		letter-spacing: var(--tracking-tight);
 		margin: 0;
 		display: flex;
 		align-items: center;
@@ -367,14 +361,7 @@
 	}
 
 	.product-subtitle {
-		color: var(--color-text-dark);
 		margin-bottom: 1rem;
-		font-family: var(--font-serif);
-		font-style: italic;
-		font-size: var(--font-size-lg);
-		font-weight: var(--font-weight-normal);
-		letter-spacing: var(--tracking-wide);
-		line-height: var(--leading-relaxed);
 	}
 
 	.benefits-title {
@@ -436,16 +423,11 @@
 		}
 
 		.product-name {
-			font-size: 1.75em;
 			gap: 0.375rem;
 		}
 
 		.product-emoji {
 			font-size: 1em;
-		}
-
-		.product-subtitle {
-			font-size: var(--font-size-base);
 		}
 
 		/* Mobile pricing adjustments */

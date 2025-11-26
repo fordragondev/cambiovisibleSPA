@@ -134,13 +134,26 @@
 	/* Section Titles - Used in Hero, FAQ, +page for category/section headings */
 	.section-title {
 		font-family: var(--font-serif);
-		font-size: var(--font-size-3xl);
-		font-weight: var(--font-weight-normal);
+		font-size: 3rem;
+		font-weight: var(--font-weight-semibold);
 		color: var(--color-brown);
 		letter-spacing: var(--tracking-wide);
 		line-height: var(--leading-tight);
 		text-align: center;
 		margin-bottom: 2.5rem;
+		position: relative;
+		padding-bottom: 1.25rem;
+	}
+
+	.section-title::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100px;
+		height: 2px;
+		background: linear-gradient(to right, transparent, var(--color-primary), transparent);
 	}
 
 	.section-title-sm {
@@ -171,6 +184,113 @@
 		line-height: var(--leading-tight);
 	}
 
+	/* Hero-Specific Typography */
+	.hero-logo {
+		font-family: var(--font-serif);
+		font-size: 4.5rem;
+		font-weight: var(--font-weight-bold);
+		color: var(--color-brown);
+		letter-spacing: var(--tracking-widest);
+		line-height: var(--leading-tight);
+		text-align: center;
+	}
+
+	.hero-subtitle {
+		font-family: var(--font-sans);
+		font-size: var(--font-size-lg);
+		font-weight: var(--font-weight-medium);
+		color: var(--color-text-dark);
+		letter-spacing: var(--tracking-wider);
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	.hero-tagline {
+		font-family: var(--font-sans);
+		font-size: var(--font-size-lg);
+		font-weight: var(--font-weight-medium);
+		color: var(--color-text-dark);
+		line-height: var(--leading-relaxed);
+		text-align: center;
+		max-width: 650px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Intro Section Typography */
+	.intro-text-wrapper {
+		font-family: var(--font-sans);
+		font-size: var(--font-size-lg);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-dark);
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.intro-paragraph {
+		font-weight: var(--font-weight-medium);
+		margin-bottom: 1.75rem;
+	}
+
+	/* Highlight Box */
+	.highlight-box {
+		background: linear-gradient(135deg, var(--color-beige-light) 0%, var(--color-beige) 100%);
+		padding: 1.875rem;
+		border-radius: 0.9375rem;
+		margin-top: 2.5rem;
+		border: 2px solid var(--color-primary);
+		box-shadow: 0 5px 15px color-mix(in srgb, var(--color-primary) 15%, transparent);
+		transition: box-shadow 0.3s ease, transform 0.3s ease;
+	}
+
+	.highlight-box:hover {
+		box-shadow: 0 8px 20px color-mix(in srgb, var(--color-primary) 25%, transparent);
+		transform: translateY(-2px);
+	}
+
+	.highlight-box p {
+		font-family: var(--font-sans);
+		font-size: var(--font-size-base);
+		font-weight: var(--font-weight-semibold);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-dark);
+		margin: 0;
+	}
+
+	/* Product Card Typography */
+	.product-name {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-2xl);
+		font-weight: var(--font-weight-bold);
+		color: var(--color-brown);
+		line-height: var(--leading-tight);
+		text-align: center;
+	}
+
+	.product-subtitle {
+		font-family: var(--font-serif);
+		font-size: var(--font-size-base);
+		font-style: italic;
+		font-weight: var(--font-weight-normal);
+		color: var(--color-text-dark);
+		line-height: var(--leading-relaxed);
+		text-align: center;
+	}
+
+	/* Category Description */
+	.category-description {
+		font-family: var(--font-sans);
+		font-size: var(--font-size-xl);
+		font-weight: var(--font-weight-medium);
+		font-style: italic;
+		color: var(--color-text-dark);
+		line-height: var(--leading-relaxed);
+		text-align: center;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
 	/* Body Text Variants - For consistent body typography */
 	.body-text {
 		font-size: var(--font-size-base);
@@ -196,7 +316,7 @@
 	/* Responsive Typography - Mobile breakpoints */
 	@media (max-width: 768px) {
 		.section-title {
-			font-size: var(--font-size-2xl);
+			font-size: 2.25rem;
 			margin-bottom: 2rem;
 		}
 
@@ -213,6 +333,30 @@
 		}
 
 		.body-text-lg {
+			font-size: var(--font-size-base);
+		}
+
+		.hero-logo {
+			font-size: 2.5rem;
+		}
+
+		.hero-subtitle {
+			font-size: var(--font-size-base);
+		}
+
+		.hero-tagline {
+			font-size: var(--font-size-base);
+		}
+
+		.intro-text-wrapper {
+			font-size: var(--font-size-base);
+		}
+
+		.product-name {
+			font-size: var(--font-size-xl);
+		}
+
+		.category-description {
 			font-size: var(--font-size-base);
 		}
 	}

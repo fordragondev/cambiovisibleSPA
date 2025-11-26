@@ -209,7 +209,7 @@ The icon is defined in `src/app.html` with:
 
 1. **Update Contact Info** in `src/lib/data/products.ts`:
    ```typescript
-   instagram: 'https://instagram.com/cambiovisiblec',  //TODO add real Instagram
+   instagram: 'https://instagram.com/cambiovisiblec',
    email: 'contacto@cambiovisible.com'  // TODO Add real email
    ```
 

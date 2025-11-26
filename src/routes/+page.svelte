@@ -75,14 +75,14 @@
 				<div class="category-header">
 					<div class="category-icon">
 						{#if category.id === 'weight-control'}
-							💉
+							⚖
 						{:else if category.id === 'beauty-rejuvenation'}
 							✨
 						{:else}
 							⚡
 						{/if}
 					</div>
-					<h2 class="category-title">
+					<h2 class="section-title">
 						{categoryNames[category.id]}
 					</h2>
 					<div class="category-description">
@@ -187,30 +187,9 @@
 		border: 2px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
 	}
 
-	/* Enhanced Category Title */
-	.category-title {
-		font-family: var(--font-serif);
-		font-size: var(--font-size-3xl);
-		font-weight: var(--font-weight-semibold);
-		color: var(--color-brown);
-		letter-spacing: var(--tracking-wide);
-		line-height: var(--leading-tight);
-		margin-bottom: 1rem;
-		text-align: center;
-		position: relative;
-	}
-
-	/* Category Description */
+	/* Category Description - Layout only (typography in app.css) */
 	.category-description {
-		font-family: var(--font-sans);
-		font-size: var(--font-size-base);
-		font-weight: var(--font-weight-normal);
-		color: var(--color-text);
-		font-style: italic;
-		text-align: center;
-		max-width: 600px;
 		margin: 0 auto;
-		line-height: var(--leading-relaxed);
 	}
 
 	/* Decorative line under header */
@@ -311,12 +290,7 @@
 			padding: 0.5rem;
 		}
 
-		.category-title {
-			font-size: var(--font-size-2xl);
-		}
-
 		.category-description {
-			font-size: var(--font-size-sm);
 			padding: 0 1rem;
 		}
 

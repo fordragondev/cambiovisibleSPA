@@ -5,11 +5,10 @@
 <section class="hero">
 	<div class="hero-content">
 		<div class="decorative-icon">✨</div>
-		<h1 class="logo">{contactInfo.businessName}</h1>
-		<p class="subtitle">by {contactInfo.name}</p>
-		<h2 class="hero-title">Colección Premium de Péptidos 2025</h2>
-		<p class="tagline">Línea exclusiva de bienestar, regeneración y belleza desde adentro.</p>
-		<div class="decorative-icon">💎</div>
+		<h1 class="hero-logo">{contactInfo.businessName}</h1>
+		<p class="hero-subtitle">by {contactInfo.name}</p>
+		<h2 class="section-title">Colección Premium de Péptidos 2025</h2>
+		<p class="hero-tagline">Línea exclusiva de bienestar, regeneración y belleza desde adentro.</p>
 
 		<div class="hero-cta">
 			<a href="#productos" class="btn-primary">Explorar Productos</a>
@@ -21,7 +20,7 @@
 <!-- Introduction Section -->
 <section class="intro-section">
 	<h2 class="section-title">🌿 Tu cambio visible comienza desde adentro</h2>
-	<div class="intro-text">
+	<div class="intro-text-wrapper">
 		<p class="intro-paragraph">
 			<strong>Bienvenida a la Colección Premium de Péptidos 2025 – {contactInfo.businessName}.</strong>
 		</p>
@@ -39,15 +38,25 @@
 </section>
 
 <style>
+	/* Hero Section - Layout & Positioning Only */
 	.hero {
 		background: linear-gradient(135deg, var(--color-beige-light) 0%, var(--color-beige-dark) 100%);
-		min-height: 100vh;
+		min-height: auto;
+		max-height: 85vh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 3.75rem 1.25rem;
+		padding: 3rem 1.25rem 2.5rem;
 		position: relative;
 		overflow: hidden;
+	}
+
+	/* Desktop: more compact but still prominent */
+	@media (min-width: 769px) {
+		.hero {
+			max-height: 75vh;
+			padding: 4rem 1.25rem 3.5rem;
+		}
 	}
 
 	.hero::before {
@@ -61,7 +70,6 @@
 	}
 
 	.hero-content {
-		text-align: center;
 		position: relative;
 		z-index: 1;
 		max-width: 800px;
@@ -71,46 +79,10 @@
 		font-size: 4em;
 		color: color-mix(in srgb, var(--color-primary) 30%, transparent);
 		margin: 2.5rem 0;
+		text-align: center;
 	}
 
-	.logo {
-		font-family: var(--font-serif);
-		font-size: 3.5em;
-		font-weight: var(--font-weight-bold);
-		color: var(--color-brown);
-		margin-bottom: 1.25rem;
-		letter-spacing: var(--tracking-widest);
-	}
-
-	.subtitle {
-		font-family: var(--font-sans);
-		font-size: 1.3em;
-		color: var(--color-text-dark);
-		margin-bottom: 2.5rem;
-		font-weight: var(--font-weight-medium);
-		letter-spacing: var(--tracking-wider);
-		text-transform: uppercase;
-	}
-
-	.hero-title {
-		font-family: var(--font-serif);
-		font-size: 2.5em;
-		color: var(--color-brown);
-		margin: 1.875rem 0;
-		font-weight: var(--font-weight-semibold);
-		line-height: var(--leading-tight);
-	}
-
-	.tagline {
-		font-family: var(--font-sans);
-		font-size: var(--font-size-xl);
-		color: var(--color-text);
-		line-height: var(--leading-relaxed);
-		max-width: 650px;
-		margin: 0 auto 2.5rem;
-		font-weight: var(--font-weight-normal);
-	}
-
+	/* CTA Button Layout */
 	.hero-cta {
 		display: flex;
 		gap: 1.25rem;
@@ -158,107 +130,31 @@
 		transform: translateY(-2px);
 	}
 
-	/* Introduction Section */
+	/* Introduction Section - Layout Only */
 	.intro-section {
 		background: #fefdfb;
 		padding: 5rem 1.25rem;
 	}
 
-	.section-title {
-		font-family: var(--font-serif);
-		font-size: var(--font-size-3xl);
-		font-weight: var(--font-weight-semibold);
-		color: var(--color-brown);
-		letter-spacing: var(--tracking-wide);
-		line-height: var(--leading-tight);
-		margin-bottom: 1.875rem;
-		text-align: center;
-		position: relative;
-		padding-bottom: 1.25rem;
-	}
-
-	.section-title::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 100px;
-		height: 2px;
-		background: linear-gradient(to right, transparent, var(--color-primary), transparent);
-	}
-
-	.intro-text {
-		font-family: var(--font-sans);
-		font-size: var(--font-size-lg);
-		line-height: var(--leading-relaxed);
-		color: var(--color-text);
-		text-align: center;
-		max-width: 750px;
-		margin: 0 auto;
-	}
-
-	.intro-paragraph {
-		margin-bottom: 1.5rem;
-		font-weight: var(--font-weight-normal);
-	}
-
-	.intro-text strong {
-		color: var(--color-brown);
-		font-weight: var(--font-weight-bold);
-	}
-
-	.highlight-box {
-		background: linear-gradient(135deg, var(--color-beige-light) 0%, var(--color-beige) 100%);
-		padding: 1.875rem;
-		border-radius: 0.9375rem;
-		margin-top: 2.5rem;
-		border-left: 4px solid var(--color-primary);
-	}
-
-	.highlight-box p {
-		font-family: var(--font-sans);
-		line-height: var(--leading-relaxed);
-		margin: 0;
-		font-size: var(--font-size-base);
-		font-weight: var(--font-weight-medium);
-		color: var(--color-text-dark);
-	}
-
+	/* Mobile Responsive Layout */
 	@media (max-width: 768px) {
-		.logo {
-			font-size: 2.5em;
-		}
-
-		.subtitle {
-			font-size: 1em;
-		}
-
-		.hero-title {
-			font-size: 1.75em;
-		}
-
-		.tagline {
-			font-size: var(--font-size-base);
-		}
-
-		.section-title {
-			font-size: 2em;
-		}
-
-		.intro-text {
-			font-size: var(--font-size-base);
-		}
-
 		.hero-cta {
 			flex-direction: column;
 			align-items: stretch;
 		}
 
-		.btn-primary,
-		.btn-secondary {
+		.btn-primary {
 			width: 100%;
 			min-height: 54px;
+		}
+
+		.btn-secondary {
+			width: 100%;
+			min-height: 42px;
+			padding: 0.75rem 1.5rem;
+			font-size: 0.9em;
+			opacity: 0.85;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 		}
 	}
 </style>

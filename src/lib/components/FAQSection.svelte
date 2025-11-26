@@ -12,11 +12,11 @@
 	<div class="faq-container">
 		<!-- Coming Soon Notice -->
 		<div class="coming-soon">
-			<h3>💪 Próximos Envíos</h3>
-			<p>
-				<strong>CAGRI, LIPO-C y 5-AMINO</strong><br />
+			<h3 class="font-serif text-xl md:text-2xl font-semibold text-brown mb-5">💪 Próximos Envíos</h3>
+			<p class="text-text-dark text-base md:text-lg leading-relaxed m-0">
+				<strong class="text-brown font-semibold">CAGRI, LIPO-C y 5-AMINO</strong><br />
 				📦 Llegará nuevo stock próximamente.<br />
-				<span class="availability-note">¡Consulta disponibilidad actualizada!</span>
+				<span class="text-brown-light font-medium text-base">¡Consulta disponibilidad actualizada!</span>
 			</p>
 		</div>
 
@@ -25,12 +25,12 @@
 		<div class="faq-list">
 			{#each faqs as faq, index}
 				<div class="faq-item" class:open={openIndex === index}>
-					<button class="faq-question" onclick={() => toggleFAQ(index)}>
+					<button class="w-full px-5 py-6 bg-transparent border-0 text-left cursor-pointer flex justify-between items-center gap-4 font-semibold text-brown text-base md:text-lg leading-normal min-h-[56px] transition-colors hover:bg-beige-light/50" onclick={() => toggleFAQ(index)}>
 						<span>{faq.question}</span>
-						<span class="faq-icon">{openIndex === index ? '−' : '+'}</span>
+						<span class="text-2xl text-primary font-normal min-w-[30px] text-center">{openIndex === index ? '−' : '+'}</span>
 					</button>
 					<div class="faq-answer" class:open={openIndex === index}>
-						<p>{faq.answer}</p>
+						<p class="text-text-dark text-base md:text-lg leading-relaxed">{faq.answer}</p>
 					</div>
 				</div>
 			{/each}
@@ -58,56 +58,6 @@
 		border: 2px solid var(--color-primary);
 	}
 
-	.coming-soon h3 {
-		font-family: var(--font-serif);
-		font-size: var(--font-size-2xl);
-		font-weight: var(--font-weight-normal);
-		color: var(--color-brown);
-		margin-bottom: 1.25rem;
-	}
-
-	.coming-soon p {
-		color: var(--color-text-dark);
-		font-size: var(--font-size-lg);
-		line-height: var(--leading-relaxed);
-		margin: 0;
-		font-weight: var(--font-weight-normal);
-	}
-
-	.coming-soon strong {
-		color: var(--color-brown);
-		font-weight: var(--font-weight-semibold);
-	}
-
-	.availability-note {
-		font-size: var(--font-size-base);
-		color: var(--color-brown-light);
-		font-weight: var(--font-weight-medium);
-	}
-
-	.section-title {
-		font-family: var(--font-serif);
-		font-size: var(--font-size-3xl);
-		font-weight: var(--font-weight-normal);
-		color: var(--color-brown);
-		letter-spacing: var(--tracking-wide);
-		line-height: var(--leading-tight);
-		margin-bottom: 2.5rem;
-		text-align: center;
-		position: relative;
-		padding-bottom: 1.25rem;
-	}
-
-	.section-title::after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 100px;
-		height: 2px;
-		background: linear-gradient(to right, transparent, var(--color-primary), transparent);
-	}
 
 	.faq-list {
 		display: flex;
@@ -131,45 +81,10 @@
 		box-shadow: 0 5px 15px color-mix(in srgb, var(--color-primary) 20%, transparent);
 	}
 
-	.faq-question {
-		width: 100%;
-		padding: 1.5rem 1.25rem;
-		background: none;
-		border: none;
-		text-align: left;
-		cursor: pointer;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		gap: 1rem;
-		font-weight: var(--font-weight-semibold);
-		color: var(--color-brown);
-		font-size: var(--font-size-lg);
-		line-height: var(--leading-normal);
-		min-height: 56px;
-		transition: background 0.3s ease;
-	}
-
-	.faq-question:hover {
-		background: color-mix(in srgb, var(--color-beige-light) 50%, transparent);
-	}
-
-	.faq-icon {
-		font-size: 1.5em;
-		color: var(--color-primary);
-		font-weight: normal;
-		min-width: 30px;
-		text-align: center;
-	}
-
 	.faq-answer {
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.3s ease, padding 0.3s ease;
-		color: var(--color-text-dark);
-		font-size: var(--font-size-base);
-		line-height: var(--leading-relaxed);
-		font-weight: var(--font-weight-normal);
 	}
 
 	.faq-answer.open {
@@ -177,25 +92,7 @@
 		padding: 0 1.25rem 1.25rem 1.25rem;
 	}
 
-	.faq-answer p {
-		margin: 0;
-	}
-
 	@media (max-width: 768px) {
-		.section-title {
-			font-size: var(--font-size-2xl);
-		}
-
-		.coming-soon h3 {
-			font-size: var(--font-size-xl);
-		}
-
-		.faq-question {
-			font-size: var(--font-size-base);
-			padding: 1.25rem 1rem;
-			min-height: 56px;
-		}
-
 		.faq-answer.open {
 			padding: 0 1rem 1rem 1rem;
 		}

@@ -148,7 +148,7 @@
 	}
 
 	.nav-cta {
-		background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+		background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); /* WhatsApp gradient */
 		color: white !important;
 		padding: 0.75rem 1.5rem;
 		border-radius: 1.25rem;
@@ -159,7 +159,7 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 0.5rem;
-		box-shadow: 0 3px 10px color-mix(in srgb, var(--color-primary) 30%, transparent);
+		box-shadow: 0 3px 10px rgba(37, 211, 102, 0.3);
 	}
 
 	.nav-cta::after {
@@ -168,7 +168,7 @@
 
 	.nav-cta:hover {
 		transform: translateY(-2px);
-		box-shadow: 0 5px 15px color-mix(in srgb, var(--color-primary) 40%, transparent);
+		box-shadow: 0 5px 15px rgba(37, 211, 102, 0.5);
 	}
 
 	@media (max-width: 768px) {
@@ -211,7 +211,12 @@
 		.nav-cta {
 			margin-top: 0.625rem;
 			text-align: center;
-			display: block;
+			display: inline-flex;
+			padding: 0.5rem 1rem;
+			font-size: var(--font-size-sm);
+			min-height: 44px;
+			width: auto;
+			align-self: center;
 		}
 	}
 </style>

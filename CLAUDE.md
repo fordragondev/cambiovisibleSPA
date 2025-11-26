@@ -4,7 +4,7 @@ This file provides guidance to Claude Code when working with this repository.
 
 ## Project Overview
 
-**Cambiovisiblec** - Premium peptide product catalog SPA by Lorena Caicedo. Showcases wellness and beauty peptides with e-commerce features.
+**Cambiovisible** - Premium peptide product catalog SPA by Lorena Caicedo. Showcases wellness and beauty peptides with e-commerce features.
 
 **Tech Stack:**
 - SvelteKit 2 with Svelte 5 (runes-based syntax)
@@ -210,7 +210,7 @@ The icon is defined in `src/app.html` with:
 1. **Update Contact Info** in `src/lib/data/products.ts`:
    ```typescript
    instagram: 'https://instagram.com/cambiovisiblec',  //TODO add real Instagram
-   email: 'contacto@cambiovisiblec.com'  // TODO Add real email
+   email: 'contacto@cambiovisible.com'  // TODO Add real email
    ```
 
 2. **Add Product Images**:

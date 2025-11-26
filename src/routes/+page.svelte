@@ -48,13 +48,13 @@
 </script>
 
 <svelte:head>
-	<title>Cambiovisiblec - Colección Premium de Péptidos 2025</title>
+	<title>Cambiovisible - Colección Premium de Péptidos 2025</title>
 	<meta
 		name="description"
 		content="Descubre nuestra línea exclusiva de péptidos premium, diseñados para equilibrar, regenerar y transformar tu bienestar desde adentro. Pureza del 99.9%."
 	/>
 	<meta name="keywords" content="péptidos, bienestar, regeneración, belleza, salud, Colombia" />
-	<meta property="og:title" content="Cambiovisiblec - Colección Premium de Péptidos 2025" />
+	<meta property="og:title" content="Cambiovisible - Colección Premium de Péptidos 2025" />
 	<meta
 		property="og:description"
 		content="Línea exclusiva de bienestar, regeneración y belleza desde adentro."

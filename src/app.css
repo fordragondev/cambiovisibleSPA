@@ -38,7 +38,7 @@
 }
 
 :root {
-	/* Primary Theme - Cambiovisiblec Gold */
+	/* Primary Theme - Cambiovisible Gold */
 	--color-primary: #daa520; /* Gold */
 	--color-primary-dark: #b8860b; /* Dark gold */
 	--color-brown: #8b6f47; /* Main brown */
@@ -53,7 +53,7 @@
 }
 
 [data-theme='primary'] {
-	/* Primary Theme - Cambiovisiblec Gold (explicit) */
+	/* Primary Theme - Cambiovisible Gold (explicit) */
 	--color-primary: #daa520; /* Gold */
 	--color-primary-dark: #b8860b; /* Dark gold */
 	--color-brown: #8b6f47; /* Main brown */

@@ -37,17 +37,6 @@
 		</a>
 	{/if}
 
-	<!-- Promotion Message -->
-	{#if product.promotion?.message}
-		<div class="promotion-message">
-			<strong>{product.promotion.message}</strong>
-			{#if product.promotion.limitedTo}
-				<br />
-				<span class="promotion-limit">{product.promotion.limitedTo}</span>
-			{/if}
-		</div>
-	{/if}
-
 	<!-- Product Header -->
 	<div class="product-header">
 		<h3 class="product-name">
@@ -80,15 +69,30 @@
 				</div>
 			{:else if product.price}
 				<!-- Single price -->
-				<div class="price-display">
-					<span class="product-price">{formatPrice(product.price, product.currency)}</span>
-					{#if product.dosage}
-						<span class="product-dosage">⏱️ {product.dosage}</span>
-					{/if}
+				<div class="price-variant-card">
+					<span class="variant-label">
+						{#if product.dosage}
+							⏱️ {product.dosage}
+						{:else}
+							Precio
+						{/if}
+					</span>
+					<span class="variant-price">{formatPrice(product.price, product.currency)}</span>
 				</div>
 			{/if}
 		</div>
 	</div>
+
+	<!-- Promotion Message -->
+	{#if product.promotion?.message}
+		<div class="promotion-message">
+			<strong>{product.promotion.message}</strong>
+			{#if product.promotion.limitedTo}
+				<br />
+				<span class="promotion-limit">{product.promotion.limitedTo}</span>
+			{/if}
+		</div>
+	{/if}
 
 	<!-- Subtitle -->
 	{#if product.subtitle}

@@ -1,4 +1,4 @@
-# Cambiovisiblec
+# Cambiovisible
 
 Premium peptide product catalog single-page application by Lorena Caicedo. A modern, responsive website showcasing wellness and beauty peptide products with integrated e-commerce features.
 

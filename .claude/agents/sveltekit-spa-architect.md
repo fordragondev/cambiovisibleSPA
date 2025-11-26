@@ -19,7 +19,7 @@ You specialize in:
 
 ## Project-Specific Context Awareness
 
-When working with the Cambiovisiblec project (or any project with CLAUDE.md), you MUST:
+When working with the Cambiovisible project (or any project with CLAUDE.md), you MUST:
 
 1. **Follow Established Patterns**:
    - Use Svelte 5 runes syntax ($props(), $state(), {@render children()})

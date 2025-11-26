@@ -20,10 +20,12 @@ export const products: Product[] = [
 			'Incrementa energía y bienestar'
 		],
 		idealFor: 'Personas con resistencia a la insulina o dificultad para bajar de peso.',
-		price: 1800000,
+		priceVariants: [
+			{ label: '📦 20 mg', price: 1500000 }
+		],
 		currency: 'COP',
 		dosage: '20 mg',
-		image: '/images/products/retatrutide.jpg', // TODO: Add actual image
+		image: '/images/products/retatrutide.png',
 		instagramUrl: 'https://instagram.com/cambiovisiblec', // TODO: Replace with actual post
 		category: 'weight-control',
 		featured: true,
@@ -44,11 +46,11 @@ export const products: Product[] = [
 		],
 		idealFor: 'Control de peso progresivo y seguro.',
 		priceVariants: [
-			{ label: '📦 10 mg', price: 1100000 },
-			{ label: '📦 20 mg', price: 1400000 }
+			{ label: '📦 10 mg', price: 650000 },
+			{ label: '📦 20 mg', price: 800000 }
 		],
 		currency: 'COP',
-		image: '/images/products/tirzepatide.jpg',
+		image: '/images/products/tirzepatide.png',
 		instagramUrl: 'https://instagram.com/cambiovisiblec',
 		category: 'weight-control',
 		featured: true
@@ -65,9 +67,11 @@ export const products: Product[] = [
 			'Mejora el aspecto de la piel'
 		],
 		idealFor: 'Ideal para complementar cualquier tratamiento corporal o facial.',
-		price: 700000,
+		priceVariants: [
+			{ label: '📦 70 mg', price: 600000 }
+		],
 		currency: 'COP',
-		image: '/images/products/glow.jpg',
+		image: '/images/products/glow.png',
 		instagramUrl: 'https://instagram.com/cambiovisiblec',
 		category: 'beauty-rejuvenation'
 	},
@@ -81,9 +85,11 @@ export const products: Product[] = [
 			'Mantiene la energía durante el día'
 		],
 		idealFor: 'Mantén tu energía y vitalidad activa.',
-		price: 700000,
+		priceVariants: [
+			{ label: '📦 10 mg', price: 600000 }
+		],
 		currency: 'COP',
-		image: '/images/products/most.jpg',
+		image: '/images/products/default.png',
 		instagramUrl: 'https://instagram.com/cambiovisiblec',
 		category: 'beauty-rejuvenation'
 	},
@@ -98,9 +104,11 @@ export const products: Product[] = [
 			'Favorece longevidad y bienestar integral'
 		],
 		idealFor: 'Para quienes buscan equilibrio y juventud desde adentro.',
-		price: 'consult',
+		priceVariants: [
+			{ label: '📦 10 mg', price: 550000 }
+		],
 		currency: 'COP',
-		image: '/images/products/ephitalon.jpg',
+		image: '/images/products/ephitalon.png',
 		instagramUrl: 'https://instagram.com/cambiovisiblec',
 		category: 'beauty-rejuvenation'
 	},
@@ -116,9 +124,9 @@ export const products: Product[] = [
 			'Aumenta metabolismo y quema grasa',
 			'Regula el apetito de forma natural'
 		],
-		price: 800000,
+		price: 'consult',
 		currency: 'COP',
-		image: '/images/products/cagri.jpg',
+		image: '/images/products/default.png',
 		instagramUrl: 'https://instagram.com/cambiovisiblec',
 		category: 'metabolism-energy',
 		availability: 'low'
@@ -135,7 +143,7 @@ export const products: Product[] = [
 		],
 		price: 'consult',
 		currency: 'COP',
-		image: '/images/products/lipo-c.jpg',
+		image: '/images/products/default.png',
 		instagramUrl: 'https://instagram.com/cambiovisiblec',
 		category: 'metabolism-energy',
 		availability: 'coming-soon'
@@ -152,7 +160,7 @@ export const products: Product[] = [
 		],
 		price: 'consult',
 		currency: 'COP',
-		image: '/images/products/5-amino.jpg',
+		image: '/images/products/default.png',
 		instagramUrl: 'https://instagram.com/cambiovisiblec',
 		category: 'metabolism-energy',
 		availability: 'coming-soon'

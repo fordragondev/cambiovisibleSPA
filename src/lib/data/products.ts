@@ -47,7 +47,8 @@ export const products: Product[] = [
 		idealFor: 'Control de peso progresivo y seguro.',
 		priceVariants: [
 			{ label: '📦 10 mg', price: 650000 },
-			{ label: '📦 20 mg', price: 800000 }
+			{ label: '📦 15 mg', price: 800000 },
+			{ label: '📦 20 mg', price: 1150000 }
 		],
 		currency: 'COP',
 		image: '/images/products/tirzepatide.png',

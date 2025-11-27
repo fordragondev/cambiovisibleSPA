@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { slide } from 'svelte/transition';
 	import type { Product } from '$lib/types/product';
 	import { formatPrice } from '$lib/data/products';
 
@@ -7,6 +8,25 @@
 	}
 
 	let { product }: Props = $props();
+
+	// Collapsible state
+	let isExpanded = $state(false);
+
+	// Derived values for benefits display
+	const VISIBLE_BENEFITS_COUNT = 3;
+	let visibleBenefits = $derived(
+		isExpanded ? product.benefits : product.benefits.slice(0, VISIBLE_BENEFITS_COUNT)
+	);
+	let hasMoreContent = $derived(
+		product.benefits.length > VISIBLE_BENEFITS_COUNT
+	);
+	let remainingBenefitsCount = $derived(
+		Math.max(0, product.benefits.length - VISIBLE_BENEFITS_COUNT)
+	);
+
+	function toggleExpanded() {
+		isExpanded = !isExpanded;
+	}
 </script>
 
 <div class="product-card">
@@ -99,19 +119,58 @@
 		<p class="product-subtitle">{product.subtitle}</p>
 	{/if}
 
-	<!-- Benefits -->
-	<h4 class="benefits-title">🌿 Beneficios:</h4>
-	<ul class="benefits-list">
-		{#each product.benefits as benefit}
-			<li>{benefit}</li>
-		{/each}
-	</ul>
-
-	<!-- Ideal For -->
+	<!-- Ideal For (Always Visible) -->
 	{#if product.idealFor}
 		<div class="product-ideal">
 			💎 <strong>Ideal para:</strong> {product.idealFor}
 		</div>
+	{/if}
+
+	<!-- Benefits (First 3 always visible) -->
+	<h4 class="benefits-title">🌿 Beneficios Principales:</h4>
+	<ul class="benefits-list">
+		{#each visibleBenefits as benefit}
+			<li transition:slide={{ duration: 200 }}>{benefit}</li>
+		{/each}
+	</ul>
+
+	<!-- Expanded Content (Description, Components, Remaining Benefits) -->
+	{#if isExpanded}
+		<div class="expanded-content" transition:slide={{ duration: 300 }}>
+			<!-- Product Description -->
+			<div class="description-section">
+				<h4 class="section-heading">📝 Descripción</h4>
+				<p class="description-text">{product.description}</p>
+			</div>
+
+			<!-- Components List -->
+			{#if product.components && product.components.length > 0}
+				<div class="components-section">
+					<h4 class="section-heading">🧪 Componentes</h4>
+					<ul class="components-list">
+						{#each product.components as component}
+							<li>{component}</li>
+						{/each}
+					</ul>
+				</div>
+			{/if}
+		</div>
+	{/if}
+
+	<!-- Toggle Button -->
+	{#if hasMoreContent}
+		<button
+			class="details-toggle"
+			onclick={toggleExpanded}
+			aria-expanded={isExpanded}
+			aria-label={isExpanded ? 'Ver menos detalles' : 'Ver más detalles'}
+		>
+			<span class="toggle-icon">📖</span>
+			<span class="toggle-text">{isExpanded ? 'Ver menos' : 'Ver más detalles'}</span>
+			<svg class="toggle-arrow" class:rotated={isExpanded} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+				<polyline points="6 9 12 15 18 9"></polyline>
+			</svg>
+		</button>
 	{/if}
 </div>
 
@@ -404,6 +463,7 @@
 		padding: 1rem 1.25rem;
 		border-radius: 0.625rem;
 		margin-top: 1rem;
+		margin-bottom: 1.5rem;
 		font-family: var(--font-sans);
 		font-size: var(--font-size-base);
 		color: var(--color-text);
@@ -415,6 +475,131 @@
 	.product-ideal strong {
 		color: var(--color-brown);
 		font-weight: var(--font-weight-bold);
+	}
+
+	/* Expanded Content Sections */
+	.expanded-content {
+		margin-top: 1.5rem;
+		padding-top: 1.5rem;
+		border-top: 2px solid var(--color-beige-dark);
+	}
+
+	.section-heading {
+		font-family: var(--font-sans);
+		font-size: var(--font-size-lg);
+		font-weight: var(--font-weight-bold);
+		color: var(--color-brown);
+		margin-bottom: 0.75rem;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.description-section {
+		margin-bottom: 1.5rem;
+	}
+
+	.description-text {
+		font-family: var(--font-sans);
+		font-size: var(--font-size-base);
+		line-height: var(--leading-relaxed);
+		color: var(--color-text-dark);
+		background: color-mix(in srgb, var(--color-beige-light) 50%, white);
+		padding: 1rem 1.25rem;
+		border-radius: 0.625rem;
+		border-left: 3px solid var(--color-primary);
+		margin: 0;
+	}
+
+	.components-section {
+		margin-bottom: 1.5rem;
+	}
+
+	.components-list {
+		margin: 0;
+		padding-left: 0;
+		list-style: none;
+		background: color-mix(in srgb, var(--color-beige-light) 50%, white);
+		padding: 1rem 1.25rem;
+		border-radius: 0.625rem;
+	}
+
+	.components-list li {
+		padding: 0.5rem 0 0.5rem 1.5rem;
+		color: var(--color-text);
+		font-family: var(--font-sans);
+		font-size: var(--font-size-sm);
+		line-height: var(--leading-normal);
+		position: relative;
+	}
+
+	.components-list li::before {
+		content: '•';
+		position: absolute;
+		left: 0;
+		color: var(--color-primary);
+		font-weight: bold;
+		font-size: 1.2em;
+	}
+
+	/* Toggle Button - Option 1: Minimalist Text Link with Divider */
+	.details-toggle {
+		width: 100%;
+		margin-top: 1.5rem;
+		padding: 1rem 1.5rem;
+		background: transparent;
+		color: var(--color-brown);
+		border: none;
+		border-top: 1px solid var(--color-beige-dark);
+		font-family: var(--font-serif);
+		font-size: var(--font-size-base);
+		font-weight: var(--font-weight-medium);
+		font-style: italic;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		min-height: 44px;
+		letter-spacing: var(--tracking-wide);
+	}
+
+	.details-toggle:hover {
+		color: var(--color-primary);
+		border-top-color: var(--color-primary);
+	}
+
+	.details-toggle:active {
+		color: var(--color-primary-dark);
+	}
+
+	.toggle-icon {
+		display: none;
+	}
+
+	.toggle-text {
+		flex: 0;
+		white-space: nowrap;
+	}
+
+	.toggle-arrow {
+		transition: transform 0.3s ease;
+		width: 14px;
+		height: 14px;
+		stroke-width: 2.5;
+	}
+
+	.details-toggle:hover .toggle-arrow {
+		transform: translateY(2px);
+	}
+
+	.toggle-arrow.rotated {
+		transform: rotate(180deg);
+	}
+
+	.details-toggle:hover .toggle-arrow.rotated {
+		transform: rotate(180deg) translateY(-2px);
 	}
 
 	@media (max-width: 768px) {

@@ -268,7 +268,7 @@ The icon is defined in `src/app.html` with:
 
 ### Medium Priority (User Experience Enhancements)
 
-8. **Clarify Hero CTA Hierarchy** (`Hero.svelte`)
+8. **Clarify Hero CTA Hierarchy** (`Hero.svelte`) DONE
    - Two equal-weight CTAs split user attention
    - Make "Explorar Productos" dominant, "Contáctame" secondary (outlined style)
 
@@ -280,7 +280,7 @@ The icon is defined in `src/app.html` with:
     - Categories blend together, hard to scan
     - Add subtle background color variation, increase spacing, consider sticky category nav
 
-11. **Improve Benefits List Presentation** (`ProductCard.svelte`)
+11. **Improve Benefits List Presentation** (`ProductCard.svelte`) DONE
     - Benefits list too dense and hard to scan
     - Increase spacing, use contextual icons instead of checkmarks, consider "See more" expansion
 

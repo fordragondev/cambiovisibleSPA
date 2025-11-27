@@ -3,6 +3,8 @@ export interface Product {
 	name: string;
 	emoji: string;
 	subtitle?: string;
+	description: string; // 2-3 sentence product overview
+	components: string[]; // Ingredient/compound list
 	benefits: string[];
 	idealFor?: string;
 	price?: number | 'consult'; // Some products require price consultation

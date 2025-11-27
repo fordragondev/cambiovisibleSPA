@@ -13,6 +13,14 @@ export const products: Product[] = [
 		id: 'retatrutide',
 		name: 'RETATRUTIDE (RETA)',
 		emoji: '💉',
+		description: 'El Retatrutide es un péptido avanzado de triple acción que actúa sobre tres receptores metabólicos clave (GIP, GLP-1 y Glucagón). Desarrollado con tecnología de última generación, ofrece un control de peso superior y mejora metabólica integral con resultados sostenibles.',
+		components: [
+			'GIP receptor agonist',
+			'GLP-1 receptor agonist',
+			'Glucagon receptor agonist',
+			'Excipiente estabilizador',
+			'Buffer de pH controlado'
+		],
 		benefits: [
 			'Pérdida de peso acelerada y sostenida',
 			'Control del apetito y de la ansiedad',
@@ -39,6 +47,13 @@ export const products: Product[] = [
 		id: 'tirzepatide',
 		name: 'TIRZEPATIDE (TIRZE)',
 		emoji: '💊',
+		description: 'Péptido de doble acción que combina agonistas GIP y GLP-1 para un control efectivo del peso. Regula naturalmente el apetito y optimiza el metabolismo de la glucosa, ofreciendo resultados progresivos y seguros.',
+		components: [
+			'GIP receptor agonist',
+			'GLP-1 receptor agonist',
+			'Compuesto base peptídico',
+			'Agentes estabilizadores'
+		],
 		benefits: [
 			'Reduce el apetito y los antojos',
 			'Regula el metabolismo y la glucosa',
@@ -63,6 +78,13 @@ export const products: Product[] = [
 		name: 'GLOW',
 		emoji: '💧',
 		subtitle: 'Rejuvenecimiento Facial',
+		description: 'Fórmula especializada para rejuvenecimiento facial que estimula la regeneración celular profunda. Actúa desde el interior para mejorar la textura, luminosidad y elasticidad de la piel de forma natural y duradera.',
+		components: [
+			'Péptidos regeneradores',
+			'Aminoácidos esenciales',
+			'Factores de crecimiento celular',
+			'Antioxidantes naturales'
+		],
 		benefits: [
 			'Favorece la regeneración celular',
 			'Mejora el aspecto de la piel'
@@ -81,6 +103,13 @@ export const products: Product[] = [
 		name: 'MOST',
 		emoji: '🔥',
 		subtitle: 'Activador Metabólico',
+		description: 'Activador metabólico diseñado para impulsar la energía y optimizar el metabolismo basal. Su fórmula especializada mantiene niveles de energía constantes durante el día, favoreciendo un rendimiento físico y mental superior.',
+		components: [
+			'Activadores metabólicos',
+			'Compuestos termogénicos naturales',
+			'Vitaminas del complejo B',
+			'Minerales esenciales'
+		],
 		benefits: [
 			'Ayuda a acelerar el metabolismo',
 			'Mantiene la energía durante el día'
@@ -99,6 +128,13 @@ export const products: Product[] = [
 		name: 'EPHITALON',
 		emoji: '🧬',
 		subtitle: 'Contribuye a la reparación celular y al bienestar general',
+		description: 'Péptido bioregulador con propiedades anti-envejecimiento que actúa a nivel celular profundo. Estimula la glándula pineal y promueve la reparación del ADN, contribuyendo a la longevidad y vitalidad integral.',
+		components: [
+			'Epitalón tetrapéptido',
+			'Reguladores endocrinos',
+			'Aminoácidos esenciales',
+			'Base peptídica bioactiva'
+		],
 		benefits: [
 			'Regenera y rejuvenece las células',
 			'Mejora el descanso y la vitalidad',
@@ -120,6 +156,13 @@ export const products: Product[] = [
 		name: 'CAGRI',
 		emoji: '💪',
 		subtitle: 'Control del Apetito',
+		description: 'Péptido especializado en control del apetito que actúa regulando las señales de saciedad. Reduce la ansiedad por la comida y optimiza el metabolismo, facilitando la pérdida de grasa de manera natural y sostenible.',
+		components: [
+			'Cagrilintida peptídica',
+			'Moduladores de saciedad',
+			'Reguladores metabólicos',
+			'Base estabilizadora'
+		],
 		benefits: [
 			'Disminuye ansiedad por la comida',
 			'Aumenta metabolismo y quema grasa',
@@ -137,6 +180,14 @@ export const products: Product[] = [
 		name: 'LIPO-C',
 		emoji: '💉',
 		subtitle: 'Detox y Metabolismo',
+		description: 'Fórmula lipotrópica avanzada que combina nutrientes esenciales para la salud hepática y aceleración metabólica. Facilita la eliminación de toxinas y grasa mientras mejora los niveles de energía y rendimiento general.',
+		components: [
+			'L-Carnitina',
+			'Metionina',
+			'Inositol',
+			'Colina',
+			'Vitaminas del complejo B'
+		],
 		benefits: [
 			'Depura el hígado y acelera el metabolismo',
 			'Ayuda a eliminar grasa y toxinas',
@@ -154,6 +205,13 @@ export const products: Product[] = [
 		name: '5-AMINO',
 		emoji: '⚡',
 		subtitle: '5-Amino-1MQ',
+		description: 'Compuesto innovador que actúa a nivel mitocondrial para optimizar la quema de grasa celular. Preserva la masa muscular mientras aumenta la energía y resistencia física, ideal para composición corporal.',
+		components: [
+			'5-Amino-1MQ',
+			'Inhibidores NNMT',
+			'Potenciadores mitocondriales',
+			'Cofactores metabólicos'
+		],
 		benefits: [
 			'Favorece la pérdida de grasa celular',
 			'Preserva masa muscular',

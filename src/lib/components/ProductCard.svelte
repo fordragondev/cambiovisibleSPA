@@ -176,7 +176,7 @@
 
 <style>
 	.product-card {
-		background: linear-gradient(135deg, var(--color-beige-light) 0%, var(--color-beige) 100%);
+		background: linear-gradient(135deg, var(--color-beige-light) 15%, var(--color-beige) 85%);
 		padding: 1.875rem;
 		border-radius: 0.9375rem;
 		border: 1px solid var(--color-beige);

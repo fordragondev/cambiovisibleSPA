@@ -13,7 +13,7 @@ export const products: Product[] = [
 		id: 'retatrutide',
 		name: 'RETATRUTIDE (RETA)',
 		emoji: '💉',
-		description: 'El Retatrutide es un péptido avanzado de triple acción que actúa sobre tres receptores metabólicos clave (GIP, GLP-1 y Glucagón). Desarrollado con tecnología de última generación, ofrece un control de peso superior y mejora metabólica integral con resultados sostenibles.',
+		description: 'Medicamento inyectable innovador que actúa como agonista triple de los tres receptores metabólicos clave (GIP, GLP-1 y Glucagón). Esta triple acción mejora la saciedad, controla el azúcar en sangre y promueve la quema de grasa almacenada, logrando una reducción significativa de peso y mejoras metabólicas.',
 		components: [
 			'GIP receptor agonist',
 			'GLP-1 receptor agonist',
@@ -24,10 +24,10 @@ export const products: Product[] = [
 		benefits: [
 			'Pérdida de peso acelerada y sostenida',
 			'Control del apetito y de la ansiedad',
-			'Mejora la sensibilidad a la insulina',
-			'Incrementa energía y bienestar'
+			"Ofrece un enfoque integral para manejar la obesidad.",
+			"Mejora los marcadores de salud metabólica."
 		],
-		idealFor: 'Personas con resistencia a la insulina o dificultad para bajar de peso.',
+		idealFor: "Personas con obesidad que no han logrado resultados con otros medicamentos.",
 		priceVariants: [
 			{ label: '📦 20 mg', price: 1500000 }
 		],
@@ -37,17 +37,17 @@ export const products: Product[] = [
 		instagramUrl: 'https://instagram.com/cambiovisiblec', // TODO: Replace with actual post
 		category: 'weight-control',
 		featured: true,
-		promotion: {
+		/* promotion: {
 			badge: '🎁 PROMOCIÓN DEL MES',
 			message: 'Por la compra de Retatrutide 20 mg, recibe MOST GRATIS',
 			limitedTo: '(Válido para las 3 primeras clientas)'
-		}
+		} */
 	},
 	{
 		id: 'tirzepatide',
 		name: 'TIRZEPATIDE (TIRZE)',
 		emoji: '💊',
-		description: 'Péptido de doble acción que combina agonistas GIP y GLP-1 para un control efectivo del peso. Regula naturalmente el apetito y optimiza el metabolismo de la glucosa, ofreciendo resultados progresivos y seguros.',
+		description: "Medicamento inyectable semanal que actúa como agonista dual de los receptores GIP y GLP-1. Estimula la liberación de insulina, suprime el glucagón, retrasa el vaciamiento gástrico y reduce el apetito, logrando un excelente control de azúcar en sangre y una pérdida de peso sustancial.",
 		components: [
 			'GIP receptor agonist',
 			'GLP-1 receptor agonist',
@@ -55,11 +55,12 @@ export const products: Product[] = [
 			'Agentes estabilizadores'
 		],
 		benefits: [
-			'Reduce el apetito y los antojos',
-			'Regula el metabolismo y la glucosa',
-			'Favorece la quema de grasa corporal'
+			"Logra pérdida de peso promedio de 15-20% del peso corporal.",
+			"Control efectivo de la glucosa en Diabetes Tipo 2.",
+			"Mejora la salud metabólica global.",
+			"Reduce factores de riesgo cardiovascular."
 		],
-		idealFor: 'Control de peso progresivo y seguro.',
+		idealFor:  "Adultos con Diabetes Tipo 2 o con obesidad que buscan control integral.",
 		priceVariants: [
 			{ label: '📦 10 mg', price: 650000 },
 			{ label: '📦 15 mg', price: 800000 },
@@ -78,16 +79,20 @@ export const products: Product[] = [
 		name: 'GLOW',
 		emoji: '💧',
 		subtitle: 'Rejuvenecimiento Facial',
-		description: 'Fórmula especializada para rejuvenecimiento facial que estimula la regeneración celular profunda. Actúa desde el interior para mejorar la textura, luminosidad y elasticidad de la piel de forma natural y duradera.',
+		description: 'El GLOW es una fórmula avanzada que combina tres péptidos regeneradores: GHK-Cu, BPC-157 y TB-500.' + 
+			'Su acción conjunta estimula la producción de colágeno, acelera la reparación de tejidos y mejora la oxigenación celular, logrando una piel más firme, luminosa y saludable desde adentro.',
 		components: [
-			'Péptidos regeneradores',
-			'Aminoácidos esenciales',
-			'Factores de crecimiento celular',
-			'Antioxidantes naturales'
+		'GHK-Cu (péptido de cobre): estimula el colágeno, elastina y regeneración de la piel. Mejora la firmeza y luminosidad cutánea.',
+		'BPC-157: favorece la cicatrización, reduce la inflamación y regenera músculos, articulaciones y sistema digestivo.',
+		'TB-500: incrementa la oxigenación y la recuperación celular profunda, ayudando a reparar tejidos internos y mejorar la circulación.',
 		],
 		benefits: [
-			'Favorece la regeneración celular',
-			'Mejora el aspecto de la piel'
+		'Rejuvenece la piel y mejora su textura.',
+		'Estimula el crecimiento y la fortaleza del cabello.',
+		'Regenera tejidos musculares y articulares.',
+		'Favorece la hidratación y elasticidad de la piel.',
+		'Aumenta la energía celular y acelera la recuperación.',
+		'Reduce la inflamación y mejora el descanso.'
 		],
 		idealFor: 'Ideal para complementar cualquier tratamiento corporal o facial.',
 		priceVariants: [
@@ -155,19 +160,19 @@ export const products: Product[] = [
 		id: 'cagri',
 		name: 'CAGRI',
 		emoji: '💪',
-		subtitle: 'Control del Apetito',
-		description: 'Péptido especializado en control del apetito que actúa regulando las señales de saciedad. Reduce la ansiedad por la comida y optimiza el metabolismo, facilitando la pérdida de grasa de manera natural y sostenible.',
+		subtitle: '"Combinación de Análogo de Amilina y GLP-1',
+		description: "Combina cagrilintida (análogo de amilina) con semaglutida (agonista GLP-1) en una inyección semanal. Esta combinación sinérgica actúa sobre múltiples vías reguladoras del apetito y metabolismo, logrando una pérdida de peso superior a la de cada componente por separado.",
 		components: [
-			'Cagrilintida peptídica',
-			'Moduladores de saciedad',
-			'Reguladores metabólicos',
-			'Base estabilizadora'
+			"Cagrilintida: análogo de amilina de acción prolongada que regula el apetito y balance energético.",
+			"Semaglutida: agonista del receptor GLP-1 que reduce el apetito y mejora el control glucémico."
 		],
 		benefits: [
-			'Disminuye ansiedad por la comida',
-			'Aumenta metabolismo y quema grasa',
-			'Regula el apetito de forma natural'
+			"Pérdida de peso sustancial (hasta 20.4% en 68 semanas).",
+			"Mejora significativa del control glucémico.",
+			"Reducción del riesgo cardiovascular.",
+			"Efecto sinérgico superior a monoterapias."
 		],
+		idealFor: "Pacientes con Diabetes Tipo 2 u obesidad que requieren abordaje intensivo.",
 		price: 'consult',
 		currency: 'COP',
 		image: '/images/products/default.png',
@@ -179,20 +184,21 @@ export const products: Product[] = [
 		id: 'lipo-c',
 		name: 'LIPO-C',
 		emoji: '💉',
-		subtitle: 'Detox y Metabolismo',
-		description: 'Fórmula lipotrópica avanzada que combina nutrientes esenciales para la salud hepática y aceleración metabólica. Facilita la eliminación de toxinas y grasa mientras mejora los niveles de energía y rendimiento general.',
+		subtitle: "Inyección Lipotrópica para Pérdida de Grasa",
+		description: "Lipo-C es una fórmula lipotrópica que combina metionina, inositol y colina para estimular la descomposición y metabolización de grasas. Esta combinación apoya la función hepática, aumenta los niveles de energía y potencia los resultados de dieta y ejercicio.",
 		components: [
-			'L-Carnitina',
-			'Metionina',
-			'Inositol',
-			'Colina',
+			"Metionina: aminoácido esencial que apoya el metabolismo lipídico y aumenta energía.",
+			"Inositol: mejora la función celular y acelera la reducción de grasa corporal.",
+			"Colina: nutriente esencial clave en la descomposición de grasas para producción de energía.",
 			'Vitaminas del complejo B'
 		],
 		benefits: [
-			'Depura el hígado y acelera el metabolismo',
-			'Ayuda a eliminar grasa y toxinas',
-			'Mejora energía y rendimiento físico'
+			"Facilita la pérdida de peso y grasa corporal.",
+			"Aumenta los niveles de energía y vitalidad.",
+			"Mejora la función hepática y desintoxicación.",
+			"Potencia los efectos del ejercicio y dieta."
 		],
+		idealFor: "Personas que buscan potenciar sus esfuerzos de pérdida de peso.",
 		price: 'consult',
 		currency: 'COP',
 		image: '/images/products/default.png',
@@ -204,19 +210,21 @@ export const products: Product[] = [
 		id: '5-amino',
 		name: '5-AMINO',
 		emoji: '⚡',
-		subtitle: '5-Amino-1MQ',
-		description: 'Compuesto innovador que actúa a nivel mitocondrial para optimizar la quema de grasa celular. Preserva la masa muscular mientras aumenta la energía y resistencia física, ideal para composición corporal.',
+		subtitle: "Activador de Músculo y Metabolismo",
+		description: "5-AMINO (5-amino-1MQ) es un compuesto que bloquea la enzima NNMT, responsable de inhibir el metabolismo. Al inhibir esta enzima, activa la vía AMPK que incrementa el gasto calórico y la quema de grasa, especialmente durante el ejercicio.",
 		components: [
-			'5-Amino-1MQ',
-			'Inhibidores NNMT',
+			"5-amino-1MQ: inhibidor de la enzima NNMT que activa el metabolismo energético.",
+			"Activador natural de la vía AMPK para quema de grasas.",
 			'Potenciadores mitocondriales',
 			'Cofactores metabólicos'
 		],
 		benefits: [
-			'Favorece la pérdida de grasa celular',
-			'Preserva masa muscular',
-			'Aumenta energía y resistencia física'
+			"Aumenta el metabolismo basal y quema de grasas.",
+			"Mejora el rendimiento deportivo y resistencia.",
+			"Promueve la composición corporal magra.",
+			"Potencia los efectos del ejercicio físico."
 		],
+		idealFor: "Deportistas y personas activas que buscan optimizar su composición corporal.",
 		price: 'consult',
 		currency: 'COP',
 		image: '/images/products/default.png',

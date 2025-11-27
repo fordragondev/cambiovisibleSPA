@@ -151,7 +151,6 @@
 	}
 
 	.category-section[data-category-index='1'] {
-		background: var(--color-beige);
 		box-shadow:
 			inset 0 2px 0 color-mix(in srgb, var(--color-primary) 20%, transparent),
 			inset 0 -2px 0 color-mix(in srgb, var(--color-primary) 20%, transparent),
@@ -161,7 +160,7 @@
 	}
 
 	.category-section[data-category-index='2'] {
-		background: var(--color-beige-dark);
+		background: var(--color-beige-light);
 		border-top: 4px solid var(--color-primary);
 		box-shadow: 0 -4px 16px color-mix(in srgb, var(--color-primary) 15%, transparent);
 	}

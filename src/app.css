@@ -261,11 +261,13 @@
 	/* Product Card Typography */
 	.product-name {
 		font-family: var(--font-serif);
-		font-size: var(--font-size-2xl);
-		font-weight: var(--font-weight-bold);
-		color: var(--color-brown);
+		font-size: var(--font-size-3xl); /* 40px - increased from 2xl (32px) */
+		font-weight: 800; /* Extra bold - heavier than 700 */
+		color: var(--color-text-dark); /* Darker color for more contrast */
 		line-height: var(--leading-tight);
 		text-align: center;
+		letter-spacing: var(--tracking-wider);
+		text-transform: uppercase;
 	}
 
 	.product-subtitle {
@@ -353,7 +355,7 @@
 		}
 
 		.product-name {
-			font-size: var(--font-size-xl);
+			font-size: var(--font-size-2xl); /* 32px on mobile - increased from xl (24px) */
 		}
 
 		.category-description {

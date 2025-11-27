@@ -192,16 +192,17 @@ The icon is defined in `src/app.html` with:
 ## Completed Features
 
 - TypeScript data structures for products, categories, FAQs
-- 8 peptide products with details (benefits, pricing, availability)
+- 8 peptide products with details (benefits, pricing, availability, descriptions, components)
 - Custom Tailwind theme with brand colors
 - Google Fonts (Cormorant Garamond + Montserrat)
 - Mobile-first responsive design
 - Sticky navigation with mobile menu
-- Product cards with Instagram integration
+- Product cards with Instagram integration and collapsible content
 - FAQ accordion
 - WhatsApp QR code contact section
 - Smooth scroll navigation
 - Lazy loading images
+- Progressive disclosure for product details (show first 3 benefits, expand for more)
 
 ## Pending Tasks
 
@@ -270,7 +271,8 @@ The icon is defined in `src/app.html` with:
 
 8. **Clarify Hero CTA Hierarchy** (`Hero.svelte`) DONE
    - Two equal-weight CTAs split user attention
-   - Make "Explorar Productos" dominant, "Contáctame" secondary (outlined style)
+   - Made "Explorar Productos" dominant, "Contáctame" secondary (smaller, subdued on mobile with 85% opacity)
+   - Hero section height reduced to max-height: 75vh (desktop), 85vh (mobile)
 
 9. **Hide QR Code on Mobile** (`ContactSection.svelte`)
    - QR code pointless on mobile (can't scan from same device)
@@ -292,7 +294,7 @@ The icon is defined in `src/app.html` with:
     - Scarcity indicators buried in paragraph text
     - Move to top, use bold numbers, add visual progress indicator
 
-14. **Standardize WhatsApp Button Styling** (`Navigation.svelte`, `ContactSection.svelte`, `Hero.svelte`)
+14. **Standardize WhatsApp Button Styling** (`Navigation.svelte`, `ContactSection.svelte`, `Hero.svelte`) DONE
     - Inconsistent WhatsApp CTA styling across components
     - Use same colors, SVG icon (not emoji), consistent hover states
 
@@ -372,6 +374,14 @@ Three product categories:
 2. **Belleza & Rejuvenecimiento** (Beauty): GLOW, MOST, EPHITALON
 3. **Metabolismo & Energía** (Metabolism): CAGRI, LIPO-C, 5-AMINO
 
+### Collapsible Product Cards
+Product cards use progressive disclosure to reduce page length:
+- **Default view**: First 3 benefits + "Ideal para" section
+- **Expanded view**: Full benefits list + product description + components list
+- Implementation: Svelte 5 `$state()` and `$derived()` runes with slide transitions
+- Toggle button: Minimalist text link style with top border divider
+- Reduces estimated page scroll length by ~50%
+
 ### Styling Best Practices
 
 1. **Prefer Tailwind Utilities:**
@@ -412,3 +422,24 @@ Three product categories:
 - **Preloading:** `data-sveltekit-preload-data="hover"` for faster navigation
 - **Adapter:** Currently `adapter-auto` (auto-detects deployment platform)
 - **Language:** Spanish (`lang="es"` in `app.html`)
+
+## Recent Implementation Notes
+
+### Typography Adjustments (src/app.css)
+- `.hero-logo`: Increased desktop size to `4.5rem` (72px), mobile stays `2.5rem`
+- `.category-description`: Increased to `var(--font-size-xl)` (24px/1.5rem)
+- `.section-title`: Fixed to `3rem` (48px) instead of `var(--font-size-3xl)` (40px)
+
+### Product Data Structure (src/lib/types/product.ts, src/lib/data/products.ts)
+- Added `description: string` field for 2-3 sentence product overview
+- Added `components: string[]` field for ingredient/compound lists
+- All 8 products populated with description and components data
+
+### ProductCard Component (src/lib/components/ProductCard.svelte)
+- Svelte 5 reactive state: `$state()` for `isExpanded`, `$derived()` for computed values
+- Progressive disclosure: Shows first 3 benefits by default, expandable to show all
+- Expanded content: Description section + Components list with styled backgrounds
+- Layout: "Ideal para" positioned above benefits list for better conversion flow
+- Toggle button: Minimalist text link with top border divider, serif italic font
+- Slide transitions for smooth expand/collapse animation
+- Accessibility: ARIA attributes (`aria-expanded`, `aria-label`), 44px minimum tap targets

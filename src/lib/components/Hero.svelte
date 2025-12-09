@@ -157,4 +157,11 @@
 			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 		}
 	}
+
+	/* Small phones (iPhone SE, small Android) - Prevent button cutoff */
+	@media (max-width: 375px) {
+		.hero {
+			padding-bottom: 3rem;
+		}
+	}
 </style>

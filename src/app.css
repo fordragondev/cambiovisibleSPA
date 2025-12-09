@@ -38,7 +38,7 @@
 }
 
 :root {
-	/* Primary Theme - Cambiovisible Gold */
+	/* Primary Theme - Cambiovisible Gold (Light Mode) */
 	--color-primary: #daa520; /* Gold */
 	--color-primary-dark: #b8860b; /* Dark gold */
 	--color-brown: #8b6f47; /* Main brown */
@@ -50,6 +50,30 @@
 	--color-text: #6b5d52;
 	--color-promo: #ff6b6b; /* Promotion red */
 	--color-promo-dark: #ee5a6f;
+}
+
+/* Dark Mode Theme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		/* Keep gold accents - they work well in dark mode */
+		--color-primary: #e6b800; /* Brighter gold for dark backgrounds */
+		--color-primary-dark: #daa520; /* Standard gold */
+
+		/* Dark warm backgrounds */
+		--color-brown: #c4a57b; /* Light brown for headings */
+		--color-brown-light: #d4b896;
+		--color-beige-light: #1a1510; /* Very dark brown */
+		--color-beige: #2d2520; /* Dark brown */
+		--color-beige-dark: #3d3530; /* Medium dark brown */
+
+		/* Light text for dark backgrounds */
+		--color-text-dark: #f5f0e8; /* Light beige text */
+		--color-text: #e8dcc8; /* Slightly darker light text */
+
+		/* Promotion colors - slightly adjusted for dark mode */
+		--color-promo: #ff7b7b; /* Lighter red for visibility */
+		--color-promo-dark: #ff6b6b;
+	}
 }
 
 [data-theme='primary'] {
